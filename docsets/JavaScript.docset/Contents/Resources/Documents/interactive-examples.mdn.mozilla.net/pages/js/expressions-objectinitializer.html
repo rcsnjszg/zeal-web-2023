@@ -1,0 +1,57 @@
+<html><!-- Mirrored from interactive-examples.mdn.mozilla.net/pages/js/expressions-objectinitializer.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 06:20:05 GMT --><head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>JavaScript Demo: Expressions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../../css/codemirror-5-50-29fee.css?v=d23338a" rel="stylesheet">
+  <link href="../../css/editor-js9fee.css?v=d23338a" rel="stylesheet">
+  
+</head>
+
+<body>
+  <section id="static">
+    <pre><code id="static-js" data-height="taller">const object1 = { a: 'foo', b: 42, c: {} };
+
+console.log(object1.a);
+// Expected output: "foo"
+
+const a = 'foo';
+const b = 42;
+const c = {};
+const object2 = { a: a, b: b, c: c };
+
+console.log(object2.b);
+// Expected output: 42
+
+const object3 = { a, b, c };
+
+console.log(object3.a);
+// Expected output: "foo"
+</code></pre>
+  </section>
+
+  <section id="live" class="live hidden">
+    <header class="output-header full-border">
+      <h4 class="output-heading">JavaScript Demo: Expressions - Object initializer</h4>
+    </header>
+    <div id="editor" class="editor"></div>
+
+    <div class="output-container">
+      <div class="buttons-container">
+        <button id="execute" class="button run" type="button">Run ›</button>
+        <button id="reset" type="button" class="button">Reset</button>
+      </div>
+      <div id="console" class="output"><code></code></div>
+    </div>
+  </section>
+
+  
+
+  <script src="../../js/codemirror-5-50-29fee.js?v=d23338a"></script>
+  <script src="../../js/editor-js9fee.js?v=d23338a"></script>
+
+
+
+<!-- Mirrored from interactive-examples.mdn.mozilla.net/pages/js/expressions-objectinitializer.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 06:20:05 GMT -->
+
+</body></html>

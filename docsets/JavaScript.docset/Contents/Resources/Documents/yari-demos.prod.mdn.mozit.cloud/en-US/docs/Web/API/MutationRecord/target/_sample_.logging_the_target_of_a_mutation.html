@@ -1,0 +1,120 @@
+<html><!-- Mirrored from yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/API/MutationRecord/target/_sample_.logging_the_target_of_a_mutation.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 05:50:21 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex, nofollow">
+        <style>
+            body {
+              padding: 0;
+              margin: 0;
+            }
+
+            svg:not(:root) {
+              display: block;
+            }
+
+            .playable-code {
+              background-color: #f4f7f8;
+              border: none;
+              border-left: 6px solid #558abb;
+              border-width: medium medium medium 6px;
+              color: #4d4e53;
+              height: 100px;
+              width: 90%;
+              padding: 10px 10px 0;
+            }
+
+            .playable-canvas {
+              border: 1px solid #4d4e53;
+              border-radius: 2px;
+            }
+
+            .playable-buttons {
+              text-align: right;
+              width: 90%;
+              padding: 5px 10px 5px 26px;
+            }
+        </style>
+        
+        <style>
+            #log {
+  border: 1px dotted black;
+  padding: 0.5rem;
+}
+
+#red-div {
+  border: 1px solid red;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+  overflow: auto;
+}
+
+#blue-div {
+  border: 1px solid blue;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  overflow: auto;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 50% auto;
+}
+
+        </style>
+        
+        <title>MutationRecord.target</title>
+        
+    </head>
+    <body>
+        
+            <pre id="log">Target of mutation:</pre>
+<button id="add-nodes-to-red-div">Add a node to red div</button>
+<button id="add-nodes-to-blue-div">Add a node to blue div</button>
+<button id="reset">Reset</button>
+<div id="container">
+  <div id="red-div"></div>
+  <div id="blue-div"></div>
+</div>
+
+        
+        
+            <script>
+                const container = document.querySelector("#container");
+const redDiv = document.querySelector("#red-div");
+const blueDiv = document.querySelector("#blue-div");
+const addToRed = document.querySelector("#add-nodes-to-red-div");
+const addToBlue = document.querySelector("#add-nodes-to-blue-div");
+const reset = document.querySelector("#reset");
+const log = document.querySelector("#log");
+
+addToRed.addEventListener("click", () => {
+  const newPara = document.createElement("p");
+  newPara.textContent = `Current time: ${Date.now()}`;
+  redDiv.appendChild(newPara);
+});
+
+addToBlue.addEventListener("click", () => {
+  const newPara = document.createElement("p");
+  newPara.textContent = `Current time: ${Date.now()}`;
+  blueDiv.appendChild(newPara);
+});
+
+reset.addEventListener("click", () => self.location.reload());
+
+function logMutationTarget(records) {
+  for (const record of records) {
+    log.textContent = `Target of mutation: ${record.target.id}`;
+  }
+}
+
+const observer = new MutationObserver(logMutationTarget);
+observer.observe(container, { childList: true, subtree: true });
+
+            </script>
+        
+    
+
+<!-- Mirrored from yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/API/MutationRecord/target/_sample_.logging_the_target_of_a_mutation.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 05:50:21 GMT -->
+</body></html>

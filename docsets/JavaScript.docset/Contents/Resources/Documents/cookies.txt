@@ -1,0 +1,25 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+developer.mozilla.org	TRUE	/	FALSE	1999999999	login-cookie	HEvjFGFqcg59ouU0VKxNJQq0+32n84lVkcwqXyXeJhLQxYQ89VDIf4hQGV7Mm2fxXkgdqSdL1w2jEyt0aN48pXTlPmMqbf5xW9Vjo3xWLx9vjqYd7UuSGtlubeCR2GNLwYnmeFK23K6do2xO3RV5S7A+Vu0SPDF6k88BDYZ8B9kSIngIHFKicBrq9/sKnHXfsVOdoHen5dop
+developer.mozilla.org	TRUE	/	FALSE	1999999999	SameSite	Lax
+commons.wikimedia.org	TRUE	/	FALSE	1999999999	WMF-Last-Access	14-Feb-2023
+.wikimedia.org	TRUE	/	FALSE	1999999999	GeoIP	US:NJ:Cedar_Knolls:40.82:-74.46:v4
+github.com	TRUE	/	FALSE	1999999999	_octo	GH1.1.450305259.1676341146
+github.com	TRUE	/	FALSE	1999999999	logged_in	no
+commons.wikimedia.org	TRUE	/	FALSE	1999999999	ss0-commonswikiSession	gm1635g9cgldsvi09jujfsfqtrej624d
+commons.wikimedia.org	TRUE	/	FALSE	1999999999	commonswikiSession	gm1635g9cgldsvi09jujfsfqtrej624d
+commons.wikimedia.org	TRUE	/	FALSE	1999999999	SameSite	None
+github.com	TRUE	/	FALSE	1999999999	_device_id	0dbe3a5dadb4e13d106d19412ca88f16
+www.cablelabs.com	TRUE	/	FALSE	1999999999	gdpr[consent_types]	%5B%5D
+www.cablelabs.com	TRUE	/	FALSE	1999999999	gdpr[allowed_cookies]	%5B%5D
+wikipedia.org	TRUE	/	FALSE	1999999999	WMF-Last-Access	14-Feb-2023
+commons.m.wikimedia.org	TRUE	/	FALSE	1999999999	ss0-commonswikiSession	rde99bf88vplbhcc9oogjbfp10lhtbu2
+commons.m.wikimedia.org	TRUE	/	FALSE	1999999999	commonswikiSession	rde99bf88vplbhcc9oogjbfp10lhtbu2
+commons.m.wikimedia.org	TRUE	/	FALSE	1999999999	SameSite	None
+commons.m.wikimedia.org	TRUE	/	FALSE	1999999999	WMF-Last-Access	14-Feb-2023
+.wikipedia.org	TRUE	/	FALSE	1999999999	GeoIP	US:NJ:Cedar_Knolls:40.82:-74.46:v4
+.wikipedia.org	TRUE	/	FALSE	1999999999	WMF-Last-Access-Global	14-Feb-2023
+commons.wikimedia.org	TRUE	/	FALSE	1999999999	cpPosIndex	2%401676357901%236b4d974c3364504e4bb9bcec55e21b80
+github.com	TRUE	/	FALSE	1999999999	_gh_sess	iLv1WQcQbWhJmO4nhcIBTt46POioM7e2VCnwQs%2FrZATiENYeeRigtG5Y06zYPMZE9exZH3qgQoNHof939umKCt7EaxYD0zwrDCmq3EzSadGWGKnOjF9v8tHZs0cPv3%2FnRgMoTpD%2B5eHL0OAhukS16m4PmBJCx9eVDdJyrwUlP98cflzoJZfCpOGvpAUNCwCgO4m5rHGY%2F8%2B8zzLNQCGEmWspmZJqTzOkO69vyf62iULVCwtesmwnPrT9tgSvHifFXh%2FS9aXwaXoDiahrSDLmFw%3D%3D--fg3NO7NPag7229XL--7LNvbFuP2hEAFsjKdnJnXg%3D%3D
+github.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+

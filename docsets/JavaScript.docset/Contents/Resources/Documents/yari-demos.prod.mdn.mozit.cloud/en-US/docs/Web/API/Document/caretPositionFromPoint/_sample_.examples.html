@@ -1,0 +1,118 @@
+<html><!-- Mirrored from yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/API/Document/caretPositionFromPoint/_sample_.examples.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 05:39:47 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex, nofollow">
+        <style>
+            body {
+              padding: 0;
+              margin: 0;
+            }
+
+            svg:not(:root) {
+              display: block;
+            }
+
+            .playable-code {
+              background-color: #f4f7f8;
+              border: none;
+              border-left: 6px solid #558abb;
+              border-width: medium medium medium 6px;
+              color: #4d4e53;
+              height: 100px;
+              width: 90%;
+              padding: 10px 10px 0;
+            }
+
+            .playable-canvas {
+              border: 1px solid #4d4e53;
+              border-radius: 2px;
+            }
+
+            .playable-buttons {
+              text-align: right;
+              width: 90%;
+              padding: 5px 10px 5px 26px;
+            }
+        </style>
+        
+        <style>
+            #message {
+  color: red;
+  font-weight: bold;
+}
+
+#message.fallback {
+  color: darkorange;
+}
+
+#message.supported {
+  color: green;
+}
+
+        </style>
+        
+        <title>Document.caretPositionFromPoint()</title>
+        
+    </head>
+    <body>
+        
+            <div id="message" class="supported">This browser supports the non-standard document.caretRangeFromPoint</div>
+
+<p>
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+  kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+</p>
+
+        
+        
+            <script>
+                function insertBreakAtPoint(e) {
+  let range;
+  let textNode;
+  let offset;
+
+  if (document.caretPositionFromPoint) {
+    range = document.caretPositionFromPoint(e.clientX, e.clientY);
+    textNode = range.offsetNode;
+    offset = range.offset;
+  } else if (document.caretRangeFromPoint) {
+    // Use WebKit-proprietary fallback method
+    range = document.caretRangeFromPoint(e.clientX, e.clientY);
+    textNode = range.startContainer;
+    offset = range.startOffset;
+  } else {
+    // Neither method is supported, do nothing
+    return;
+  }
+  // Only split TEXT_NODEs
+  if (textNode?.nodeType === 3) {
+    let replacement = textNode.splitText(offset);
+    let br = document.createElement("br");
+    textNode.parentNode.insertBefore(br, replacement);
+  }
+}
+
+let paragraphs = document.getElementsByTagName("p");
+for (const paragraph of paragraphs) {
+  paragraph.addEventListener("click", insertBreakAtPoint, false);
+}
+
+let message = document.getElementById("message");
+if (document.caretPositionFromPoint) {
+  message.textContent =
+    "This browser supports the standard document.caretPositionFromPoint";
+  message.classList.add("supported");
+} else if (document.caretRangeFromPoint) {
+  message.textContent =
+    "This browser supports the non-standard document.caretRangeFromPoint";
+  message.classList.add("supported");
+}
+
+            </script>
+        
+    
+
+<!-- Mirrored from yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/API/Document/caretPositionFromPoint/_sample_.examples.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 05:39:47 GMT -->
+</body></html>

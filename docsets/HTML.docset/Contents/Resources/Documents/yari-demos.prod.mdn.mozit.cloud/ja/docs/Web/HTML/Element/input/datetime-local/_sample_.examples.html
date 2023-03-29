@@ -1,0 +1,271 @@
+<html><!-- Mirrored from yari-demos.prod.mdn.mozit.cloud/ja/docs/Web/HTML/Element/input/datetime-local/_sample_.examples.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 00:11:11 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex, nofollow">
+        <style>
+            body {
+              padding: 0;
+              margin: 0;
+            }
+
+            svg:not(:root) {
+              display: block;
+            }
+
+            .playable-code {
+              background-color: #f4f7f8;
+              border: none;
+              border-left: 6px solid #558abb;
+              border-width: medium medium medium 6px;
+              color: #4d4e53;
+              height: 100px;
+              width: 90%;
+              padding: 10px 10px 0;
+            }
+
+            .playable-canvas {
+              border: 1px solid #4d4e53;
+              border-radius: 2px;
+            }
+
+            .playable-buttons {
+              text-align: right;
+              width: 90%;
+              padding: 5px 10px 5px 26px;
+            }
+        </style>
+        
+        <style>
+            div {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+input[type="number"] {
+  width: 100px;
+}
+
+input + span {
+  padding-right: 30px;
+}
+
+input:invalid + span::after {
+  position: absolute;
+  content: "✖";
+  padding-left: 5px;
+}
+
+input:valid + span::after {
+  position: absolute;
+  content: "✓";
+  padding-left: 5px;
+}
+
+        </style>
+        
+        <title>&lt;input type="datetime-local"&gt;</title>
+        
+    </head>
+    <body>
+        
+            <form>
+  <div class="nativeDateTimePicker" style="display: none;">
+    <label for="party">希望するパーティーの日時を選択して下さい。</label>
+    <input type="datetime-local" id="party" name="bday">
+    <span class="validity"></span>
+  </div>
+  <p class="fallbackLabel" style="display: block;">希望するパーティーの日時を選択して下さい。</p>
+  <div class="fallbackDateTimePicker" style="display: block;">
+    <div>
+      <span>
+        <select id="year" name="year">
+        </select>
+        <label for="year">年</label>
+      </span>
+      <span>
+        <select id="month" name="month">
+          <option selected="">1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+        </select>
+        <label for="month">月</label>
+      </span>
+      <span>
+        <select id="day" name="day"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option><option>31</option></select>
+        <label for="day">日</label>
+      </span>
+    </div>
+    <div>
+      <span>
+        <select id="hour" name="hour">
+        時
+        </select>
+      </span>
+      <span>
+        <select id="minute" name="minute">
+        分
+        </select>
+      </span>
+    </div>
+  </div>
+</form>
+
+        
+        
+            <script>
+                // 変数を定義
+const nativePicker = document.querySelector('.nativeDateTimePicker');
+const fallbackPicker = document.querySelector('.fallbackDateTimePicker');
+const fallbackLabel = document.querySelector('.fallbackLabel');
+
+const yearSelect = document.querySelector('#year');
+const monthSelect = document.querySelector('#month');
+const daySelect = document.querySelector('#day');
+const hourSelect = document.querySelector('#hour');
+const minuteSelect = document.querySelector('#minute');
+
+// 最初はフォールバックを非表示にする
+fallbackPicker.style.display = 'none';
+fallbackLabel.style.display = 'none';
+
+// 新しい日付入力が文字列入力にフォールバックされるかどうか
+const test = document.createElement('input');
+
+try {
+  test.type = 'datetime-local';
+} catch (e) {
+  console.log(e.description);
+}
+
+// もし文字列入力になるならば、 if () {} ブロックの中のコードを実行する
+if (test.type === 'text') {
+  // ネイティブの日付選択を隠してフォールバック版を表示
+  nativePicker.style.display = 'none';
+  fallbackPicker.style.display = 'block';
+  fallbackLabel.style.display = 'block';
+
+  // 日と年を動的に生成する
+  //  (月は常に同じなのでハードコーディング)
+  populateDays(monthSelect.value);
+  populateYears();
+  populateHours();
+  populateMinutes();
+}
+
+function populateDays(month) {
+  // 日の <select> から現在の一連の <option> 要素を削除し、
+  // 挿入のための準備をする
+  while (daySelect.firstChild) {
+    daySelect.removeChild(daySelect.firstChild);
+  }
+
+  // 挿入する日数を保持する変数を作成
+  let dayNum;
+
+  // 31 か 30 日か
+  if (['1', '3', '5', '7', '8', '10', '12'].includes(month)) {
+    dayNum = 31;
+  } else if (['4', '6', '9', '11'].includes(month)) {
+    dayNum = 30;
+  } else {
+  // 2 月の場合は、閏年かどうかを計算する
+    const year = yearSelect.value;
+    const isLeap = new Date(year, 1, 29).getMonth() === 1;
+    dayNum = isLeap ? 29 : 28;
+  }
+
+  // 日付の <select> に正しい数の新しい <option> 要素を
+  for (let i = 1; i <= dayNum; i++) {
+    const option = document.createElement('option');
+    option.textContent = i;
+    daySelect.appendChild(option);
+  }
+
+  // 前回の日が既に設定されていたら、 daySelect の値を
+  // 日に設定し、年を変えたときに1に戻ることを避ける
+  if (previousDay) {
+    daySelect.value = previousDay;
+
+    // 前回設定されていた日が大きい数字、つまり31であった場合、
+    // そして日数が少ない月 (例えば2月) を選択した場合、
+    // コードのこの部分で空欄を表示するのではなく、一番大きな日が
+    // 選択されるようにする
+    if (daySelect.value === "") {
+      daySelect.value = previousDay - 1;
+    }
+
+    if (daySelect.value === "") {
+      daySelect.value = previousDay - 2;
+    }
+
+    if (daySelect.value === "") {
+      daySelect.value = previousDay - 3;
+    }
+  }
+}
+
+function populateYears() {
+  // 今年を数字として取得
+  const date = new Date();
+  const year = date.getFullYear();
+
+  // 今年から 100 年前までの年が <select> で選択できるようにする
+  for (let i = 0; i <= 100; i++) {
+    const option = document.createElement('option');
+    option.textContent = year - i;
+    yearSelect.appendChild(option);
+  }
+}
+
+function populateHours() {
+  // populate the hours <select> with the 24 hours of the day
+  for (let i = 0; i <= 23; i++) {
+    const option = document.createElement('option');
+    option.textContent = (i < 10) ? `0${i}` : i;
+    hourSelect.appendChild(option);
+  }
+}
+
+function populateMinutes() {
+  // populate the minutes <select> with the 60 hours of each minute
+  for (let i = 0; i <= 59; i++) {
+    const option = document.createElement('option');
+    option.textContent = (i < 10) ? `0${i}` : i;
+    minuteSelect.appendChild(option);
+  }
+}
+
+// 年や月の <select> 値が変更されたら、 populateDays() を
+// 再実行して日数を調整する
+yearSelect.onchange = () => {
+  populateDays(monthSelect.value);
+}
+
+monthSelect.onchange = () => {
+  populateDays(monthSelect.value);
+}
+
+//日数を保存
+let previousDay;
+
+// 以前どの日が設定されていたかを保存する
+// 使い方は populateDays() を参照
+daySelect.onchange = () => {
+  previousDay = daySelect.value;
+}
+
+            </script>
+        
+    
+
+<!-- Mirrored from yari-demos.prod.mdn.mozit.cloud/ja/docs/Web/HTML/Element/input/datetime-local/_sample_.examples.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 00:11:11 GMT -->
+</body></html>

@@ -1,0 +1,79 @@
+<html><!-- Mirrored from yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/CSS/:last-of-type/_sample_.multiple_selectors_elements.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Feb 2023 22:59:55 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex, nofollow">
+        <style>
+            body {
+              padding: 0;
+              margin: 0;
+            }
+
+            svg:not(:root) {
+              display: block;
+            }
+
+            .playable-code {
+              background-color: #f4f7f8;
+              border: none;
+              border-left: 6px solid #558abb;
+              border-width: medium medium medium 6px;
+              color: #4d4e53;
+              height: 100px;
+              width: 90%;
+              padding: 10px 10px 0;
+            }
+
+            .playable-canvas {
+              border: 1px solid #4d4e53;
+              border-radius: 2px;
+            }
+
+            .playable-buttons {
+              text-align: right;
+              width: 90%;
+              padding: 5px 10px 5px 26px;
+            }
+        </style>
+        
+        <style>
+            p:last-of-type {
+  background: skyblue;
+}
+
+.container .item:last-of-type {
+  color: red;
+  font-weight: bold;
+}
+
+        </style>
+        
+        <title>:last-of-type</title>
+        
+    </head>
+    <body>
+        
+            <p>This `p` is not selected.</p>
+<p>This `p` is not selected either.</p>
+<p>
+  This `p` is last `p` element of its parent e.g. `body` selected by `p` type
+  selector.
+</p>
+<div class="container">
+  <div class="item">This `div` is not selected.</div>
+  <div class="item">This `div` is not selected either.</div>
+  <div class="item">
+    This `div` is last `div` element of its parent `div` selected by `.container
+    .item` class selector.
+  </div>
+  <p class="item">
+    This `p` is last `p` element of its parent `div` selected by `.container
+    .item` class selector.
+  </p>
+</div>
+
+        
+        
+    
+
+<!-- Mirrored from yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/CSS/:last-of-type/_sample_.multiple_selectors_elements.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Feb 2023 22:59:55 GMT -->
+</body></html>

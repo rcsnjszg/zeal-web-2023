@@ -1,0 +1,59 @@
+<html><!-- Mirrored from interactive-examples.mdn.mozilla.net/pages/js/async-functionasterisk-function.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 06:19:47 GMT --><head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>JavaScript Demo: AsyncGeneratorFunction()</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../../css/codemirror-5-50-29fee.css?v=d23338a" rel="stylesheet">
+  <link href="../../css/editor-js9fee.css?v=d23338a" rel="stylesheet">
+  
+</head>
+
+<body>
+  <section id="static">
+    <pre><code id="static-js" data-height="taller">const AsyncGeneratorFunction = async function* () {}.constructor;
+
+const foo = new AsyncGeneratorFunction(`
+  yield await Promise.resolve('a');
+  yield await Promise.resolve('b');
+  yield await Promise.resolve('c');
+`);
+
+let str = '';
+
+async function generate() {
+  for await (const val of foo()) {
+    str = str + val;
+  }
+  console.log(str);
+}
+
+generate();
+// Expected output: "abc"
+</code></pre>
+  </section>
+
+  <section id="live" class="live hidden">
+    <header class="output-header full-border">
+      <h4 class="output-heading">JavaScript Demo: AsyncGeneratorFunction()</h4>
+    </header>
+    <div id="editor" class="editor"></div>
+
+    <div class="output-container">
+      <div class="buttons-container">
+        <button id="execute" class="button run" type="button">Run ›</button>
+        <button id="reset" type="button" class="button">Reset</button>
+      </div>
+      <div id="console" class="output"><code></code></div>
+    </div>
+  </section>
+
+  
+
+  <script src="../../js/codemirror-5-50-29fee.js?v=d23338a"></script>
+  <script src="../../js/editor-js9fee.js?v=d23338a"></script>
+
+
+
+<!-- Mirrored from interactive-examples.mdn.mozilla.net/pages/js/async-functionasterisk-function.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 06:19:47 GMT -->
+
+</body></html>

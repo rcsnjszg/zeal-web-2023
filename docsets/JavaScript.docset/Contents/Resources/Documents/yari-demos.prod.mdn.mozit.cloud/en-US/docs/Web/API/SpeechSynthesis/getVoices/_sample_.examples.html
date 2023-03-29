@@ -1,0 +1,79 @@
+<html><!-- Mirrored from yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/API/SpeechSynthesis/getVoices/_sample_.examples.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 05:51:26 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex, nofollow">
+        <style>
+            body {
+              padding: 0;
+              margin: 0;
+            }
+
+            svg:not(:root) {
+              display: block;
+            }
+
+            .playable-code {
+              background-color: #f4f7f8;
+              border: none;
+              border-left: 6px solid #558abb;
+              border-width: medium medium medium 6px;
+              color: #4d4e53;
+              height: 100px;
+              width: 90%;
+              padding: 10px 10px 0;
+            }
+
+            .playable-canvas {
+              border: 1px solid #4d4e53;
+              border-radius: 2px;
+            }
+
+            .playable-buttons {
+              text-align: right;
+              width: 90%;
+              padding: 5px 10px 5px 26px;
+            }
+        </style>
+        
+        <title>SpeechSynthesis.getVoices()</title>
+        
+    </head>
+    <body>
+        
+            <select id="voiceSelect"><option data-lang="ar-001" data-name="Majed">Majed (ar-001) — DEFAULT</option><option data-lang="bg-BG" data-name="Daria">Daria (bg-BG) — DEFAULT</option><option data-lang="ca-ES" data-name="Montse">Montse (ca-ES) — DEFAULT</option><option data-lang="cs-CZ" data-name="Zuzana">Zuzana (cs-CZ) — DEFAULT</option><option data-lang="da-DK" data-name="Sara">Sara (da-DK) — DEFAULT</option><option data-lang="de-DE" data-name="Sandy">Sandy (de-DE) — DEFAULT</option><option data-lang="de-DE" data-name="Shelley">Shelley (de-DE) — DEFAULT</option><option data-lang="de-DE" data-name="Grandma">Grandma (de-DE) — DEFAULT</option><option data-lang="de-DE" data-name="Grandpa">Grandpa (de-DE) — DEFAULT</option><option data-lang="de-DE" data-name="Eddy">Eddy (de-DE) — DEFAULT</option><option data-lang="de-DE" data-name="Reed">Reed (de-DE) — DEFAULT</option><option data-lang="de-DE" data-name="Anna">Anna (de-DE) — DEFAULT</option><option data-lang="de-DE" data-name="Rocko">Rocko (de-DE) — DEFAULT</option><option data-lang="de-DE" data-name="Flo">Flo (de-DE) — DEFAULT</option><option data-lang="el-GR" data-name="Melina">Melina (el-GR) — DEFAULT</option><option data-lang="en-AU" data-name="Karen">Karen (en-AU) — DEFAULT</option><option data-lang="en-GB" data-name="Rocko">Rocko (en-GB) — DEFAULT</option><option data-lang="en-GB" data-name="Shelley">Shelley (en-GB) — DEFAULT</option><option data-lang="en-GB" data-name="Daniel">Daniel (en-GB) — DEFAULT</option><option data-lang="en-GB" data-name="Grandma">Grandma (en-GB) — DEFAULT</option><option data-lang="en-GB" data-name="Grandpa">Grandpa (en-GB) — DEFAULT</option><option data-lang="en-GB" data-name="Flo">Flo (en-GB) — DEFAULT</option><option data-lang="en-GB" data-name="Eddy">Eddy (en-GB) — DEFAULT</option><option data-lang="en-GB" data-name="Reed">Reed (en-GB) — DEFAULT</option><option data-lang="en-GB" data-name="Sandy">Sandy (en-GB) — DEFAULT</option><option data-lang="en-IE" data-name="Moira">Moira (en-IE) — DEFAULT</option><option data-lang="en-IN" data-name="Rishi">Rishi (en-IN) — DEFAULT</option><option data-lang="en-US" data-name="Flo">Flo (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Bahh">Bahh (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Albert">Albert (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Fred">Fred (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Jester">Jester (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Organ">Organ (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Cellos">Cellos (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Zarvox">Zarvox (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Rocko">Rocko (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Shelley">Shelley (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Superstar">Superstar (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Grandma">Grandma (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Eddy">Eddy (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Bells">Bells (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Grandpa">Grandpa (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Trinoids">Trinoids (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Kathy">Kathy (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Reed">Reed (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Boing">Boing (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Whisper">Whisper (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Wobble">Wobble (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Good News">Good News (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Bad News">Bad News (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Bubbles">Bubbles (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Samantha">Samantha (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Sandy">Sandy (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Junior">Junior (en-US) — DEFAULT</option><option data-lang="en-US" data-name="Ralph">Ralph (en-US) — DEFAULT</option><option data-lang="en-ZA" data-name="Tessa">Tessa (en-ZA) — DEFAULT</option><option data-lang="es-ES" data-name="Shelley">Shelley (es-ES) — DEFAULT</option><option data-lang="es-ES" data-name="Grandma">Grandma (es-ES) — DEFAULT</option><option data-lang="es-ES" data-name="Rocko">Rocko (es-ES) — DEFAULT</option><option data-lang="es-ES" data-name="Grandpa">Grandpa (es-ES) — DEFAULT</option><option data-lang="es-ES" data-name="Mónica">Mónica (es-ES) — DEFAULT</option><option data-lang="es-ES" data-name="Sandy">Sandy (es-ES) — DEFAULT</option><option data-lang="es-ES" data-name="Flo">Flo (es-ES) — DEFAULT</option><option data-lang="es-ES" data-name="Eddy">Eddy (es-ES) — DEFAULT</option><option data-lang="es-ES" data-name="Reed">Reed (es-ES) — DEFAULT</option><option data-lang="es-MX" data-name="Rocko">Rocko (es-MX) — DEFAULT</option><option data-lang="es-MX" data-name="Paulina">Paulina (es-MX) — DEFAULT</option><option data-lang="es-MX" data-name="Flo">Flo (es-MX) — DEFAULT</option><option data-lang="es-MX" data-name="Sandy">Sandy (es-MX) — DEFAULT</option><option data-lang="es-MX" data-name="Eddy">Eddy (es-MX) — DEFAULT</option><option data-lang="es-MX" data-name="Shelley">Shelley (es-MX) — DEFAULT</option><option data-lang="es-MX" data-name="Grandma">Grandma (es-MX) — DEFAULT</option><option data-lang="es-MX" data-name="Reed">Reed (es-MX) — DEFAULT</option><option data-lang="es-MX" data-name="Grandpa">Grandpa (es-MX) — DEFAULT</option><option data-lang="fi-FI" data-name="Shelley">Shelley (fi-FI) — DEFAULT</option><option data-lang="fi-FI" data-name="Grandma">Grandma (fi-FI) — DEFAULT</option><option data-lang="fi-FI" data-name="Grandpa">Grandpa (fi-FI) — DEFAULT</option><option data-lang="fi-FI" data-name="Sandy">Sandy (fi-FI) — DEFAULT</option><option data-lang="fi-FI" data-name="Satu">Satu (fi-FI) — DEFAULT</option><option data-lang="fi-FI" data-name="Eddy">Eddy (fi-FI) — DEFAULT</option><option data-lang="fi-FI" data-name="Rocko">Rocko (fi-FI) — DEFAULT</option><option data-lang="fi-FI" data-name="Reed">Reed (fi-FI) — DEFAULT</option><option data-lang="fi-FI" data-name="Flo">Flo (fi-FI) — DEFAULT</option><option data-lang="fr-CA" data-name="Shelley">Shelley (fr-CA) — DEFAULT</option><option data-lang="fr-CA" data-name="Grandma">Grandma (fr-CA) — DEFAULT</option><option data-lang="fr-CA" data-name="Grandpa">Grandpa (fr-CA) — DEFAULT</option><option data-lang="fr-CA" data-name="Rocko">Rocko (fr-CA) — DEFAULT</option><option data-lang="fr-CA" data-name="Eddy">Eddy (fr-CA) — DEFAULT</option><option data-lang="fr-CA" data-name="Reed">Reed (fr-CA) — DEFAULT</option><option data-lang="fr-CA" data-name="Amélie">Amélie (fr-CA) — DEFAULT</option><option data-lang="fr-CA" data-name="Flo">Flo (fr-CA) — DEFAULT</option><option data-lang="fr-CA" data-name="Sandy">Sandy (fr-CA) — DEFAULT</option><option data-lang="fr-FR" data-name="Grandma">Grandma (fr-FR) — DEFAULT</option><option data-lang="fr-FR" data-name="Flo">Flo (fr-FR) — DEFAULT</option><option data-lang="fr-FR" data-name="Rocko">Rocko (fr-FR) — DEFAULT</option><option data-lang="fr-FR" data-name="Grandpa">Grandpa (fr-FR) — DEFAULT</option><option data-lang="fr-FR" data-name="Sandy">Sandy (fr-FR) — DEFAULT</option><option data-lang="fr-FR" data-name="Eddy">Eddy (fr-FR) — DEFAULT</option><option data-lang="fr-FR" data-name="Thomas">Thomas (fr-FR) — DEFAULT</option><option data-lang="fr-FR" data-name="Jacques">Jacques (fr-FR) — DEFAULT</option><option data-lang="fr-FR" data-name="Shelley">Shelley (fr-FR) — DEFAULT</option><option data-lang="he-IL" data-name="Carmit">Carmit (he-IL) — DEFAULT</option><option data-lang="hi-IN" data-name="Lekha">Lekha (hi-IN) — DEFAULT</option><option data-lang="hr-HR" data-name="Lana">Lana (hr-HR) — DEFAULT</option><option data-lang="hu-HU" data-name="Tünde">Tünde (hu-HU) — DEFAULT</option><option data-lang="id-ID" data-name="Damayanti">Damayanti (id-ID) — DEFAULT</option><option data-lang="it-IT" data-name="Eddy">Eddy (it-IT) — DEFAULT</option><option data-lang="it-IT" data-name="Sandy">Sandy (it-IT) — DEFAULT</option><option data-lang="it-IT" data-name="Reed">Reed (it-IT) — DEFAULT</option><option data-lang="it-IT" data-name="Shelley">Shelley (it-IT) — DEFAULT</option><option data-lang="it-IT" data-name="Grandma">Grandma (it-IT) — DEFAULT</option><option data-lang="it-IT" data-name="Grandpa">Grandpa (it-IT) — DEFAULT</option><option data-lang="it-IT" data-name="Flo">Flo (it-IT) — DEFAULT</option><option data-lang="it-IT" data-name="Rocko">Rocko (it-IT) — DEFAULT</option><option data-lang="it-IT" data-name="Alice">Alice (it-IT) — DEFAULT</option><option data-lang="ja-JP" data-name="Kyoko">Kyoko (ja-JP) — DEFAULT</option><option data-lang="ko-KR" data-name="Yuna">Yuna (ko-KR) — DEFAULT</option><option data-lang="ms-MY" data-name="Amira">Amira (ms-MY) — DEFAULT</option><option data-lang="nb-NO" data-name="Nora">Nora (nb-NO) — DEFAULT</option><option data-lang="nl-BE" data-name="Ellen">Ellen (nl-BE) — DEFAULT</option><option data-lang="nl-NL" data-name="Xander">Xander (nl-NL) — DEFAULT</option><option data-lang="pl-PL" data-name="Zosia">Zosia (pl-PL) — DEFAULT</option><option data-lang="pt-BR" data-name="Reed">Reed (pt-BR) — DEFAULT</option><option data-lang="pt-BR" data-name="Luciana">Luciana (pt-BR) — DEFAULT</option><option data-lang="pt-BR" data-name="Shelley">Shelley (pt-BR) — DEFAULT</option><option data-lang="pt-BR" data-name="Grandma">Grandma (pt-BR) — DEFAULT</option><option data-lang="pt-BR" data-name="Grandpa">Grandpa (pt-BR) — DEFAULT</option><option data-lang="pt-BR" data-name="Rocko">Rocko (pt-BR) — DEFAULT</option><option data-lang="pt-BR" data-name="Flo">Flo (pt-BR) — DEFAULT</option><option data-lang="pt-BR" data-name="Sandy">Sandy (pt-BR) — DEFAULT</option><option data-lang="pt-BR" data-name="Eddy">Eddy (pt-BR) — DEFAULT</option><option data-lang="pt-PT" data-name="Joana">Joana (pt-PT) — DEFAULT</option><option data-lang="ro-RO" data-name="Ioana">Ioana (ro-RO) — DEFAULT</option><option data-lang="ru-RU" data-name="Milena">Milena (ru-RU) — DEFAULT</option><option data-lang="sk-SK" data-name="Laura">Laura (sk-SK) — DEFAULT</option><option data-lang="sv-SE" data-name="Alva">Alva (sv-SE) — DEFAULT</option><option data-lang="th-TH" data-name="Kanya">Kanya (th-TH) — DEFAULT</option><option data-lang="tr-TR" data-name="Yelda">Yelda (tr-TR) — DEFAULT</option><option data-lang="uk-UA" data-name="Lesya">Lesya (uk-UA) — DEFAULT</option><option data-lang="vi-VN" data-name="Linh">Linh (vi-VN) — DEFAULT</option><option data-lang="zh-CN" data-name="Tingting">Tingting (zh-CN) — DEFAULT</option><option data-lang="zh-HK" data-name="Sinji">Sinji (zh-HK) — DEFAULT</option><option data-lang="zh-TW" data-name="Meijia">Meijia (zh-TW) — DEFAULT</option></select>
+
+        
+        
+            <script>
+                function populateVoiceList() {
+  if (typeof speechSynthesis === 'undefined') {
+    return;
+  }
+
+  const voices = speechSynthesis.getVoices();
+
+  for (let i = 0; i < voices.length; i++) {
+    const option = document.createElement('option');
+    option.textContent = `${voices[i].name} (${voices[i].lang})`;
+
+    if (voices[i].default) {
+      option.textContent += ' — DEFAULT';
+    }
+
+    option.setAttribute('data-lang', voices[i].lang);
+    option.setAttribute('data-name', voices[i].name);
+    document.getElementById("voiceSelect").appendChild(option);
+  }
+}
+
+populateVoiceList();
+if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) {
+  speechSynthesis.onvoiceschanged = populateVoiceList;
+}
+
+            </script>
+        
+    
+
+<!-- Mirrored from yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/API/SpeechSynthesis/getVoices/_sample_.examples.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 05:51:26 GMT -->
+</body></html>

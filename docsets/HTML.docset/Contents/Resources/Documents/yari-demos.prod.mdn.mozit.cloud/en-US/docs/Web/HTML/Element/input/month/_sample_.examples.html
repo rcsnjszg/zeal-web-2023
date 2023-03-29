@@ -1,0 +1,159 @@
+<html><!-- Mirrored from yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/HTML/Element/input/month/_sample_.examples.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 00:03:57 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex, nofollow">
+        <style>
+            body {
+              padding: 0;
+              margin: 0;
+            }
+
+            svg:not(:root) {
+              display: block;
+            }
+
+            .playable-code {
+              background-color: #f4f7f8;
+              border: none;
+              border-left: 6px solid #558abb;
+              border-width: medium medium medium 6px;
+              color: #4d4e53;
+              height: 100px;
+              width: 90%;
+              padding: 10px 10px 0;
+            }
+
+            .playable-canvas {
+              border: 1px solid #4d4e53;
+              border-radius: 2px;
+            }
+
+            .playable-buttons {
+              text-align: right;
+              width: 90%;
+              padding: 5px 10px 5px 26px;
+            }
+        </style>
+        
+        <style>
+            div {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+input[type="number"] {
+  width: 100px;
+}
+
+input + span {
+  padding-right: 30px;
+}
+
+input:invalid + span::after {
+  position: absolute;
+  content: "✖";
+  padding-left: 5px;
+}
+
+input:valid + span::after {
+  position: absolute;
+  content: "✓";
+  padding-left: 5px;
+}
+
+        </style>
+        
+        <title>&lt;input type="month"&gt;</title>
+        
+    </head>
+    <body>
+        
+            <form>
+  <div class="nativeDatePicker" style="display: none;">
+    <label for="month-visit">What month would you like to visit us?</label>
+    <input type="month" id="month-visit" name="month-visit">
+    <span class="validity"></span>
+  </div>
+  <p class="fallbackLabel" style="display: block;">What month would you like to visit us?</p>
+  <div class="fallbackDatePicker" style="display: block;">
+    <div>
+      <span>
+        <label for="month">Month:</label>
+        <select id="month" name="month">
+          <option selected="">January</option>
+          <option>February</option>
+          <option>March</option>
+          <option>April</option>
+          <option>May</option>
+          <option>June</option>
+          <option>July</option>
+          <option>August</option>
+          <option>September</option>
+          <option>October</option>
+          <option>November</option>
+          <option>December</option>
+        </select>
+      </span>
+      <span>
+        <label for="year">Year:</label>
+        <select id="year" name="year"><option>2023</option><option>2022</option><option>2021</option><option>2020</option><option>2019</option><option>2018</option><option>2017</option><option>2016</option><option>2015</option><option>2014</option><option>2013</option><option>2012</option><option>2011</option><option>2010</option><option>2009</option><option>2008</option><option>2007</option><option>2006</option><option>2005</option><option>2004</option><option>2003</option><option>2002</option><option>2001</option><option>2000</option><option>1999</option><option>1998</option><option>1997</option><option>1996</option><option>1995</option><option>1994</option><option>1993</option><option>1992</option><option>1991</option><option>1990</option><option>1989</option><option>1988</option><option>1987</option><option>1986</option><option>1985</option><option>1984</option><option>1983</option><option>1982</option><option>1981</option><option>1980</option><option>1979</option><option>1978</option><option>1977</option><option>1976</option><option>1975</option><option>1974</option><option>1973</option><option>1972</option><option>1971</option><option>1970</option><option>1969</option><option>1968</option><option>1967</option><option>1966</option><option>1965</option><option>1964</option><option>1963</option><option>1962</option><option>1961</option><option>1960</option><option>1959</option><option>1958</option><option>1957</option><option>1956</option><option>1955</option><option>1954</option><option>1953</option><option>1952</option><option>1951</option><option>1950</option><option>1949</option><option>1948</option><option>1947</option><option>1946</option><option>1945</option><option>1944</option><option>1943</option><option>1942</option><option>1941</option><option>1940</option><option>1939</option><option>1938</option><option>1937</option><option>1936</option><option>1935</option><option>1934</option><option>1933</option><option>1932</option><option>1931</option><option>1930</option><option>1929</option><option>1928</option><option>1927</option><option>1926</option><option>1925</option><option>1924</option><option>1923</option></select>
+      </span>
+    </div>
+  </div>
+</form>
+
+        
+        
+            <script>
+                // Get UI elements
+const nativePicker = document.querySelector('.nativeDatePicker');
+const fallbackPicker = document.querySelector('.fallbackDatePicker');
+const fallbackLabel = document.querySelector('.fallbackLabel');
+
+const yearSelect = document.querySelector('#year');
+const monthSelect = document.querySelector('#month');
+
+// Hide fallback initially
+fallbackPicker.style.display = 'none';
+fallbackLabel.style.display = 'none';
+
+// Test whether a new date input falls back to a text input or not
+const test = document.createElement('input');
+
+try {
+  test.type = 'month';
+} catch (e) {
+  console.log(e.description);
+}
+
+// If it does, run the code inside the if () {} block
+if (test.type === 'text') {
+  // Hide the native picker and show the fallback
+  nativePicker.style.display = 'none';
+  fallbackPicker.style.display = 'block';
+  fallbackLabel.style.display = 'block';
+
+  // Populate the years dynamically
+  // (the months are always the same, therefore hardcoded)
+  populateYears();
+}
+
+function populateYears() {
+  // Get the current year as a number
+  const date = new Date();
+  const year = date.getFullYear();
+
+  // Make this year, and the 100 years before it available in the year <select>
+  for (let i = 0; i <= 100; i++) {
+    const option = document.createElement('option');
+    option.textContent = year - i;
+    yearSelect.appendChild(option);
+  }
+}
+
+            </script>
+        
+    
+
+<!-- Mirrored from yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/HTML/Element/input/month/_sample_.examples.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 00:03:57 GMT -->
+</body></html>

@@ -1,0 +1,127 @@
+<html><!-- Mirrored from yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/API/HTMLDialogElement/returnValue/_sample_.examples.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 05:47:41 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex, nofollow">
+        <style>
+            body {
+              padding: 0;
+              margin: 0;
+            }
+
+            svg:not(:root) {
+              display: block;
+            }
+
+            .playable-code {
+              background-color: #f4f7f8;
+              border: none;
+              border-left: 6px solid #558abb;
+              border-width: medium medium medium 6px;
+              color: #4d4e53;
+              height: 100px;
+              width: 90%;
+              padding: 10px 10px 0;
+            }
+
+            .playable-canvas {
+              border: 1px solid #4d4e53;
+              border-radius: 2px;
+            }
+
+            .playable-buttons {
+              text-align: right;
+              width: 90%;
+              padding: 5px 10px 5px 26px;
+            }
+        </style>
+        
+        <title>HTMLDialogElement.returnValue</title>
+        
+    </head>
+    <body>
+        
+            <!-- Simple pop-up dialog box containing a form -->
+<dialog id="favDialog">
+  <form method="dialog">
+    <input type="submit" aria-label="close" value="X" name="Xbutton" formnovalidate="">
+    <p>
+      <label>Favorite animal:
+        <select name="favAnimal" required="">
+          <option></option>
+          <option>Brine shrimp</option>
+          <option>Red panda</option>
+          <option>Spider monkey</option>
+        </select>
+      </label>
+    </p>
+    <menu>
+      <button type="reset" value="resetBtn">Reset</button>
+      <button type="submit" value="confirmBtn">Confirm</button>
+    </menu>
+  </form>
+</dialog>
+
+<p>
+  <button id="openDialog">Open Dialog</button>
+</p>
+<p id="text"></p>
+
+<script>
+  (() => {
+    const openDialog = document.getElementById("openDialog");
+    const dialog = document.getElementById("favDialog");
+    const text = document.getElementById("text");
+    const reset = document.querySelector("[type='reset']");
+    dialog.returnValue = "initialValue";
+
+    function openCheck(dialog) {
+      if (dialog.open) {
+        text.innerText = "Dialog open";
+      } else {
+        text.innerText = "Dialog closed";
+      }
+    }
+
+    function handleUserInput(returnValue) {
+      if (!returnValue) {
+        text.innerText += ". There was no return value"
+      } else  {
+        text.innerText += ". Return value: " + returnValue;
+      }
+    }
+
+    // "Open Dialog" button opens the <dialog> modally
+    openDialog.addEventListener("click", () => {
+      dialog.showModal();
+      openCheck(dialog);
+      handleUserInput(dialog.returnValue);
+    });
+
+    reset.addEventListener("click", () => {
+      dialog.close();
+    });
+
+        // when the dialog is closed, no matter how it is closed
+    dialog.addEventListener("close", () => {
+      openCheck(dialog);
+      handleUserInput(dialog.returnValue);
+    });
+
+
+  })();
+</script>
+<style>
+  [aria-label="close"] {
+    appearance: none;
+    border-radius: 50%;
+    border: 1px solid;
+    float: right;
+  }
+</style>
+
+        
+        
+    
+
+<!-- Mirrored from yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/API/HTMLDialogElement/returnValue/_sample_.examples.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 05:47:41 GMT -->
+</body></html>

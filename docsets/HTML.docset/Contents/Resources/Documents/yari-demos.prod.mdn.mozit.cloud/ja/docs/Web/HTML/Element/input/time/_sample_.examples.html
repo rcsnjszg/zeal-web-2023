@@ -1,0 +1,168 @@
+<html><!-- Mirrored from yari-demos.prod.mdn.mozit.cloud/ja/docs/Web/HTML/Element/input/time/_sample_.examples.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 00:11:13 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex, nofollow">
+        <style>
+            body {
+              padding: 0;
+              margin: 0;
+            }
+
+            svg:not(:root) {
+              display: block;
+            }
+
+            .playable-code {
+              background-color: #f4f7f8;
+              border: none;
+              border-left: 6px solid #558abb;
+              border-width: medium medium medium 6px;
+              color: #4d4e53;
+              height: 100px;
+              width: 90%;
+              padding: 10px 10px 0;
+            }
+
+            .playable-canvas {
+              border: 1px solid #4d4e53;
+              border-radius: 2px;
+            }
+
+            .playable-buttons {
+              text-align: right;
+              width: 90%;
+              padding: 5px 10px 5px 26px;
+            }
+        </style>
+        
+        <style>
+            div {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+input[type="number"] {
+  width: 100px;
+}
+
+input + span {
+  padding-right: 30px;
+}
+
+input:invalid + span::after {
+  position: absolute;
+  content: "✖";
+  padding-left: 5px;
+}
+
+input:valid + span::after {
+  position: absolute;
+  content: "✓";
+  padding-left: 5px;
+}
+
+        </style>
+        
+        <title>&lt;input type="time"&gt;</title>
+        
+    </head>
+    <body>
+        
+            <form>
+  <div class="nativeTimePicker" style="display: none;">
+    <label for="appt-time">
+      予約時刻を選んでください (営業時間 12:00～18:00):
+    </label>
+    <input id="appt-time" type="time" name="appt-time" min="12:00" max="18:00" required="">
+    <span class="validity"></span>
+  </div>
+  <p class="fallbackLabel" style="display: block;">
+    予約時刻を選んでください (営業時間 12:00～18:00):
+  </p>
+  <div class="fallbackTimePicker" style="display: block;">
+    <div>
+      <span>
+        <select id="hour" name="hour">
+        時
+        <option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option></select>
+      </span>
+      <span>
+        <select id="minute" name="minute">
+        分
+        <option>00</option><option>01</option><option>02</option><option>03</option><option>04</option><option>05</option><option>06</option><option>07</option><option>08</option><option>09</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option><option>31</option><option>32</option><option>33</option><option>34</option><option>35</option><option>36</option><option>37</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option><option>45</option><option>46</option><option>47</option><option>48</option><option>49</option><option>50</option><option>51</option><option>52</option><option>53</option><option>54</option><option>55</option><option>56</option><option>57</option><option>58</option><option>59</option></select>
+      </span>
+    </div>
+  </div>
+</form>
+
+        
+        
+            <script>
+                // 変数の宣言
+const nativePicker = document.querySelector('.nativeTimePicker');
+const fallbackPicker = document.querySelector('.fallbackTimePicker');
+const fallbackLabel = document.querySelector('.fallbackLabel');
+
+const hourSelect = document.querySelector('#hour');
+const minuteSelect = document.querySelector('#minute');
+
+// 最初はフォールバックを非表示にする
+fallbackPicker.style.display = 'none';
+fallbackLabel.style.display = 'none';
+
+// 新しい日付入力が文字列入力にフォールバックされるかどうか
+const test = document.createElement('input');
+
+try {
+  test.type = 'time';
+} catch (e) {
+  console.log(e.description);
+}
+
+// もし文字列入力になるならば、 if() {} ブロックの中のコードを実行する
+if (test.type === 'text') {
+  // ネイティブの日付選択を隠してフォールバック版を表示
+  nativePicker.style.display = 'none';
+  fallbackPicker.style.display = 'block';
+  fallbackLabel.style.display = 'block';
+
+  // 時と分を動的に生成する
+  populateHours();
+  populateMinutes();
+}
+
+function populateHours() {
+  // 時刻の <select> に営業時間の 6 時間分を生成する
+  for (let i = 12; i <= 18; i++) {
+    const option = document.createElement('option');
+    option.textContent = i;
+    hourSelect.appendChild(option);
+  }
+}
+
+function populateMinutes() {
+  // 分の <select> に 1 時間内の 60 分を生成する
+  for (let i = 0; i <= 59; i++) {
+    const option = document.createElement('option');
+    option.textContent = (i < 10) ? `0${i}` : i;
+    minuteSelect.appendChild(option);
+  }
+}
+
+// 時が 18 になったら、分を 00 に設定する
+// — 18:00 以降を選択できなくする
+ function setMinutesToZero() {
+   if (hourSelect.value === '18') {
+     minuteSelect.value = '00';
+   }
+ }
+
+ hourSelect.onchange = setMinutesToZero;
+ minuteSelect.onchange = setMinutesToZero;
+
+            </script>
+        
+    
+
+<!-- Mirrored from yari-demos.prod.mdn.mozit.cloud/ja/docs/Web/HTML/Element/input/time/_sample_.examples.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 00:11:13 GMT -->
+</body></html>

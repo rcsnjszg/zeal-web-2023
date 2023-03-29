@@ -1,0 +1,68 @@
+<html><!-- Mirrored from mdn.github.io/learning-area/html/forms/tasks/html5-controls/html5-controls2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 00:11:14 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+    <meta charset="utf-8">
+    <title>HTML5 controls: Task 2</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+      body {
+        background-color: #fff;
+        color: #333;
+        font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+        padding: 1em;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+
+    <style class="editable">
+
+    </style>
+  </head>
+
+  <body>
+    <section class="preview">
+
+
+
+    </section>
+
+    <textarea class="playable playable-html" style="height: 220px;">&lt;form&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;label for="max-invite"&gt;Select maximum number of invitations&lt;/label&gt;
+      
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;button&gt;Submit&lt;/button&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/form&gt;
+    </textarea>
+
+    <div class="playable-buttons">
+      <input id="reset" type="button" value="Reset">
+    </div>
+  
+
+  <script>
+    function setSliderOutput() {
+      const invite = document.querySelector('#max-invite');
+      const output = document.querySelector('.invite-output');
+
+      output.textContent = invite.value;
+
+      invite.addEventListener('input', function() {
+        output.textContent = invite.value;
+      });
+    }
+
+    setInterval(setSliderOutput, 200);
+  </script>
+  <script src="../playable.js"></script>
+
+<!-- Mirrored from mdn.github.io/learning-area/html/forms/tasks/html5-controls/html5-controls2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 00:11:14 GMT -->
+
+</body></html>

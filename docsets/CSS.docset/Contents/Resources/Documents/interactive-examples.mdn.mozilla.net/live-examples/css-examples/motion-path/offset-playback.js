@@ -1,0 +1,1 @@
+window.addEventListener("load",function(){const n=document.getElementById("example-element"),e=document.getElementById("playback");e.addEventListener("click",function(){n.classList.contains("running")?(n.classList.remove("running"),e.textContent="Play"):(n.classList.add("running"),e.textContent="Pause")})});

@@ -1,0 +1,41 @@
+<html><!-- Mirrored from mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 06:03:06 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Allowance updater example</title>
+  </head>
+  <body>
+    <label for="shopping-check">Has the shopping been done? </label>
+    <input type="checkbox" id="shopping-check">
+
+    <p>Child has earned $5 this week.</p>
+
+    <script>
+      const checkBox = document.querySelector('input');
+      const para = document.querySelector('p');
+      let shoppingDone = false;
+
+      checkBox.addEventListener('change', () => {
+        checkBox.disabled = true;
+        shoppingDone = true;
+        updateAllowance();
+      });
+
+      function updateAllowance() {
+        let childsAllowance;
+        if (shoppingDone === true) {
+          childsAllowance = 10;
+        } else {
+          childsAllowance = 5;
+        }
+
+        para.textContent = `Child has earned \$${childsAllowance} this week.`;
+      }
+
+      updateAllowance();
+    </script>
+  
+
+<!-- Mirrored from mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 06:03:06 GMT -->
+
+</body></html>

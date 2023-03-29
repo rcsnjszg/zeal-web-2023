@@ -1,0 +1,95 @@
+<html><!-- Mirrored from yari-demos.prod.mdn.mozit.cloud/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/_sample_.advanced_example.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 05:53:16 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex, nofollow">
+        <style>
+            body {
+              padding: 0;
+              margin: 0;
+            }
+
+            svg:not(:root) {
+              display: block;
+            }
+
+            .playable-code {
+              background-color: #f4f7f8;
+              border: none;
+              border-left: 6px solid #558abb;
+              border-width: medium medium medium 6px;
+              color: #4d4e53;
+              height: 100px;
+              width: 90%;
+              padding: 10px 10px 0;
+            }
+
+            .playable-canvas {
+              border: 1px solid #4d4e53;
+              border-radius: 2px;
+            }
+
+            .playable-buttons {
+              text-align: right;
+              width: 90%;
+              padding: 5px 10px 5px 26px;
+            }
+        </style>
+        
+        <title>Promise</title>
+        
+    </head>
+    <body>
+        
+            <button id="make-promise">Faça uma promise!</button>
+<div id="log"></div>
+
+        
+        
+            <script>
+                "use strict";
+
+let promiseCount = 0;
+
+function testPromise() {
+  const thisPromiseCount = ++promiseCount;
+  const log = document.getElementById("log");
+  // começar
+  log.insertAdjacentHTML("beforeend", `${thisPromiseCount}) Iniciado<br>`);
+  // Fazemos uma nova promise: prometemos uma contagem numérica dessa promise,
+  // a partir de 1 (após esperar 3s)
+  const p1 = new Promise((resolve, reject) => {
+    // A função executora é chamada com a habilidade
+    // para resolver ou rejeitar a promise
+    log.insertAdjacentHTML(
+      "beforeend",
+      `${thisPromiseCount}) Construtor de promise<br>`
+    );
+    // Este é apenas um exemplo para criar assincronismo
+    setTimeout(() => {
+      // Nós cumprimos a promise
+      resolve(thisPromiseCount);
+    }, Math.random() * 2000 + 1000);
+  });
+
+  // Definimos o que fazer quando a promise é resolvida com a chamada then(),
+  // e o que fazer quando a promise é rejeitada com a chamada catch()
+  p1.then((val) => {
+    // Registra o valor de atendimento
+    log.insertAdjacentHTML("beforeend", `${val}) Promise cumprida<br>`);
+  }).catch((reason) => {
+    // Registra o motivo da rejeição
+    console.log(`Manuseie a promise rejeitada (${reason}) aqui.`);
+  });
+  // fim
+  log.insertAdjacentHTML("beforeend", `${thisPromiseCount}) Promise feita<br>`);
+}
+
+const btn = document.getElementById("make-promise");
+btn.addEventListener("click", testPromise);
+
+            </script>
+        
+    
+
+<!-- Mirrored from yari-demos.prod.mdn.mozit.cloud/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/_sample_.advanced_example.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 05:53:16 GMT -->
+</body></html>

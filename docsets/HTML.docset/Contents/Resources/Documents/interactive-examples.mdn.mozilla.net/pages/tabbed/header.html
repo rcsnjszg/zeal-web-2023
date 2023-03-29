@@ -1,0 +1,96 @@
+<html><!-- Mirrored from interactive-examples.mdn.mozilla.net/pages/tabbed/header.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Feb 2023 23:59:20 GMT --><head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>HTML Demo: &lt;header&gt;</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../../css/codemirror-tabbed-5-50-29fee.css?v=d23338a" rel="stylesheet">
+    <link href="../../css/editor-tabbed9fee.css?v=d23338a" rel="stylesheet">
+</head>
+
+<body>
+    <header class="output-header hidden">
+        <h4 class="output-heading">HTML Demo: &lt;header&gt;</h4>
+        <button id="reset" class="reset" type="button">Reset</button>
+    </header>
+    <div id="editor-container" class="editor-container tabbed-standard">
+        <section id="tab-container" class="tabs">
+            <div class="tab-list" id="tablist" role="tablist">
+                <button role="tab" aria-selected="false" aria-controls="html-panel" id="html" class="hidden">
+                    HTML
+                </button>
+                <button role="tab" aria-selected="false" aria-controls="css-panel" id="css" class="hidden" tabindex="-1">
+                    CSS
+                </button>
+                <button role="tab" aria-selected="false" aria-controls="js-panel" id="js" class="hidden" tabindex="-1">
+                    JavaScript
+                </button>
+            </div>
+            <section id="html-panel" tabindex="0" role="tabpanel" aria-labelledby="html" class="hidden" aria-hidden="true">
+                <div id="html-editor">
+                    <pre><code>&lt;header&gt;
+    &lt;a class="logo" href="#"&gt;Cute Puppies Express!&lt;/a&gt;
+&lt;/header&gt;
+
+&lt;article&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Beagles&lt;/h1&gt;
+        &lt;time&gt;08.12.2014&lt;/time&gt;
+    &lt;/header&gt;
+    &lt;p&gt;I love beagles &lt;em&gt;so&lt;/em&gt; much! Like, really, a lot. They’re adorable and their ears are so, so snuggly soft!&lt;/p&gt;
+&lt;/article&gt;
+</code></pre>
+                </div>
+            </section>
+            <section id="css-panel" tabindex="0" role="tabpanel" aria-labelledby="css" class="hidden" aria-hidden="true">
+                <div id="css-editor">
+                    <pre><code>.logo {
+    background: left / cover url('/media/examples/puppy-header-logo.jpg');
+    display: flex;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+    font: bold calc(1em + 2 * (100vw - 120px) / 100) 'Dancing Script', fantasy;
+    color: #ff0083;
+    text-shadow: #000 2px 2px 0.2rem;
+}
+
+header &gt; h1 {
+    margin-bottom: 0;
+}
+
+header &gt; time {
+    font: italic 0.7rem sans-serif;
+}
+</code></pre>
+                </div>
+            </section>
+            <section id="js-panel" tabindex="0" role="tabpanel" aria-labelledby="js" class="hidden" aria-hidden="true">
+                <div id="js-editor">
+                    <pre><code></code></pre>
+                </div>
+            </section>
+        </section>
+        <div id="output" class="shadow-container">
+          <h4 class="output-label">Output</h4>
+          <shadow-output></shadow-output>
+        </div>
+    </div>
+
+    <section class="console-container hidden" aria-hidden="true">
+        <h4 class="console-label">Console Output</h4>
+        <button type="button" id="clear" class="clear">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 877.714 1024" class="icon-clear">
+                <path class="path0" fill="currentColor" d="M749.714 510.286c0-62.286-18.286-120-49.714-168.571L269.143 772.001c49.143 32 107.429 50.857 169.714 50.857 171.429 0 310.857-140 310.857-312.571zM178.857 681.143l431.429-430.857c-49.143-33.143-108-52-171.429-52-171.429 0-310.857 140-310.857 312 0 63.429 18.857 121.714 50.857 170.857zm698.857-170.857c0 243.429-196.571 440.571-438.857 440.571S0 753.714 0 510.286c0-242.857 196.571-440 438.857-440s438.857 197.143 438.857 440z"></path>
+            </svg>
+            clear console</button>
+        <div id="console" class="console"><code></code></div>
+    </section>
+
+    <script src="../../js/codemirror-tabbed-5-50-29fee.js?v=d23338a"></script>
+    <script src="../../js/editor-tabbed9fee.js?v=d23338a"></script>
+
+
+
+<!-- Mirrored from interactive-examples.mdn.mozilla.net/pages/tabbed/header.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Feb 2023 23:59:20 GMT -->
+
+</body></html>

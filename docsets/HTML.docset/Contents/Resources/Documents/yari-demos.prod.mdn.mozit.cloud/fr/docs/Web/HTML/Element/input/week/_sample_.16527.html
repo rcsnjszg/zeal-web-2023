@@ -1,0 +1,142 @@
+<html><!-- Mirrored from yari-demos.prod.mdn.mozit.cloud/fr/docs/Web/HTML/Element/input/week/_sample_.16527.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 00:11:13 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex, nofollow">
+        <style>
+            body {
+              padding: 0;
+              margin: 0;
+            }
+
+            svg:not(:root) {
+              display: block;
+            }
+
+            .playable-code {
+              background-color: #f4f7f8;
+              border: none;
+              border-left: 6px solid #558abb;
+              border-width: medium medium medium 6px;
+              color: #4d4e53;
+              height: 100px;
+              width: 90%;
+              padding: 10px 10px 0;
+            }
+
+            .playable-canvas {
+              border: 1px solid #4d4e53;
+              border-radius: 2px;
+            }
+
+            .playable-buttons {
+              text-align: right;
+              width: 90%;
+              padding: 5px 10px 5px 26px;
+            }
+        </style>
+        
+        <style>
+            div {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+input[type="number"] {
+  width: 100px;
+}
+
+input + span {
+  padding-right: 30px;
+}
+
+input:invalid+span:after {
+  position: absolute;
+  content: '✖';
+  padding-left: 5px;
+}
+
+input:valid+span:after {
+  position: absolute;
+  content: '✓';
+  padding-left: 5px;
+}
+
+        </style>
+        
+        <title>&lt;input type="week"&gt;</title>
+        
+    </head>
+    <body>
+        
+            <form>
+  <div class="nativeWeekPicker" style="display: none;">
+    <label for="week">À quelle semaine souhaiteriez-vous commencer ?</label>
+    <input id="week" type="week" name="week" min="2017-W01" max="2018-W52" required="">
+    <span class="validity"></span>
+  </div>
+  <p class="fallbackLabel" style="display: block;">À quelle semaine souhaiteriez-vous commencer ?</p>
+  <div class="fallbackWeekPicker" style="display: block;">
+    <div>
+      <span>
+        <label for="week">Semaine :</label>
+        <select id="fallbackWeek" name="week">
+        <option>01</option><option>02</option><option>03</option><option>04</option><option>05</option><option>06</option><option>07</option><option>08</option><option>09</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option><option>31</option><option>32</option><option>33</option><option>34</option><option>35</option><option>36</option><option>37</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option><option>45</option><option>46</option><option>47</option><option>48</option><option>49</option><option>50</option><option>51</option><option>52</option></select>
+      </span>
+      <span>
+        <label for="year">Année :</label>
+        <select id="year" name="year">
+          <option value="2017" selected="">2017</option>
+          <option value="2018">2018</option>
+        </select>
+      </span>
+    </div>
+  </div>
+</form>
+
+        
+        
+            <script>
+                // On définit certaines variables
+let nativePicker = document.querySelector('.nativeWeekPicker');
+let fallbackPicker = document.querySelector('.fallbackWeekPicker');
+let fallbackLabel = document.querySelector('.fallbackLabel');
+
+let yearSelect = document.querySelector('#year');
+let weekSelect = document.querySelector('#fallbackWeek');
+
+// À l'état initial, on masque le sélecteur alternatif
+fallbackPicker.style.display = 'none';
+fallbackLabel.style.display = 'none';
+
+// On teste si le sélecteur natif se transforme en
+// contrôle de saisie de texte ou non
+let test = document.createElement('input');
+test.type = 'week';
+// Si c'est le cas, on exécute le code dans le bloc
+// conditionnel if() {}
+if(test.type === 'text') {
+  // On masque alors le sélecteur natif et
+  // on affiche le sélecteur alternatif
+  nativePicker.style.display = 'none';
+  fallbackPicker.style.display = 'block';
+  fallbackLabel.style.display = 'block';
+
+  // On ajoute les semaines dynamiquement
+  populateWeeks();
+}
+
+function populateWeeks() {
+  // On ajoute 52 semaines grâce à une boucle
+  for(let i = 1; i <= 52; i++) {
+    let option = document.createElement('option');
+    option.textContent = (i < 10) ? ("0" + i) : i;
+    weekSelect.appendChild(option);
+  }
+}
+
+            </script>
+        
+    
+
+<!-- Mirrored from yari-demos.prod.mdn.mozit.cloud/fr/docs/Web/HTML/Element/input/week/_sample_.16527.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 00:11:13 GMT -->
+</body></html>

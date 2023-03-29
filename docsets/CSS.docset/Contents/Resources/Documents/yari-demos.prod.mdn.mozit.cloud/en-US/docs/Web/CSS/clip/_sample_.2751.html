@@ -1,0 +1,87 @@
+<html><!-- Mirrored from yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/CSS/clip/_sample_.2751.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Feb 2023 22:56:46 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex, nofollow">
+        <style>
+            body {
+              padding: 0;
+              margin: 0;
+            }
+
+            svg:not(:root) {
+              display: block;
+            }
+
+            .playable-code {
+              background-color: #f4f7f8;
+              border: none;
+              border-left: 6px solid #558abb;
+              border-width: medium medium medium 6px;
+              color: #4d4e53;
+              height: 100px;
+              width: 90%;
+              padding: 10px 10px 0;
+            }
+
+            .playable-canvas {
+              border: 1px solid #4d4e53;
+              border-radius: 2px;
+            }
+
+            .playable-buttons {
+              text-align: right;
+              width: 90%;
+              padding: 5px 10px 5px 26px;
+            }
+        </style>
+        
+        <style>
+            .dotted-border {
+  border: dotted;
+  position: relative;
+  width: 390px;
+  height: 400px;
+}
+
+#top-left,
+#middle,
+#bottom-right {
+  position: absolute;
+  top: 0;
+}
+
+#top-left {
+  left: 400px;
+  clip: rect(0, 130px, 90px, 0);
+}
+
+#middle {
+  left: 270px;
+  clip: rect(100px, 260px, 190px, 130px);
+}
+
+#bottom-right {
+  left: 140px;
+  clip: rect(200px, 390px, 290px, 260px);
+}
+
+        </style>
+        
+        <title>clip</title>
+        
+    </head>
+    <body>
+        
+            <p class="dotted-border">
+  <img src="macarons.png" alt="Original graphic">
+  <img id="top-left" src="macarons.png" alt="Graphic clipped to upper left">
+  <img id="middle" src="macarons.png" alt="Graphic clipped towards middle">
+  <img id="bottom-right" src="macarons.png" alt="Graphic clipped to bottom right">
+</p>
+
+        
+        
+    
+
+<!-- Mirrored from yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/CSS/clip/_sample_.2751.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Feb 2023 22:56:46 GMT -->
+</body></html>

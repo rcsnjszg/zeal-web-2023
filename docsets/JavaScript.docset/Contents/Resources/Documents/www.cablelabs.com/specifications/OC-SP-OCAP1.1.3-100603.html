@@ -1,0 +1,979 @@
+<html><!-- Mirrored from www.cablelabs.com/specifications/OC-SP-OCAP1.1.3-100603.pdf by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 06:20:35 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+
+        <meta charset="utf-8">
+        <title>Specifications Search</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+        <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="icon" type="image/x-icon" href="../wp-content/themes/cablelabs-v23/favicon.ico">
+
+        <link rel="preload" as="script" href="../../polyfill.io/v3/polyfill.mine3f2.js?flags=gated&amp;features=default%2CIntersectionObserver">
+
+        <link rel="alternate" type="application/rss+xml" title="CableLabs RSS Feed" href="https://www.cablelabs.com/feed">
+        <link rel="alternate" type="application/atom+xml" title="CableLabs Atom Feed" href="https://www.cablelabs.com/feed/atom">
+
+        <meta name="google-site-verification" content="-poFR20ZedcGsyuZCwXhGJ-3qMmU4LUkUgrs6a0_3yE">
+
+        
+        <style type="text/css">
+            /* Hide SVGs until styles load. Prevents FGI (flash of giant icons). */
+            /* Requires unsetting the display in the main CSS stylesheet. */
+            svg {display: none}
+        </style>
+
+        <script async="" src="../../static.woopra.com/js/w.js"></script><script async="" src="../../static.woopra.com/js/w.js"></script><script async="" src="../../www.googletagmanager.com/gtm5445.html?id=GTM-W2XJT2J"></script><script data-cfasync="false" data-no-defer="1">var ewww_webp_supported=!1;function check_webp_feature(A,e){var w;e=void 0!==e?e:function(){},ewww_webp_supported?e(ewww_webp_supported):((w=new Image).onload=function(){ewww_webp_supported=0<w.width&&0<w.height,e&&e(ewww_webp_supported)},w.onerror=function(){e&&e(!1)},w.src="data:image/webp;base64,"+{alpha:"UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA=="}[A])}check_webp_feature("alpha");</script><script data-cfasync="false" data-no-defer="1">var Arrive=function(c,w){"use strict";if(c.MutationObserver&&"undefined"!=typeof HTMLElement){var r,a=0,u=(r=HTMLElement.prototype.matches||HTMLElement.prototype.webkitMatchesSelector||HTMLElement.prototype.mozMatchesSelector||HTMLElement.prototype.msMatchesSelector,{matchesSelector:function(e,t){return e instanceof HTMLElement&&r.call(e,t)},addMethod:function(e,t,r){var a=e[t];e[t]=function(){return r.length==arguments.length?r.apply(this,arguments):"function"==typeof a?a.apply(this,arguments):void 0}},callCallbacks:function(e,t){t&&t.options.onceOnly&&1==t.firedElems.length&&(e=[e[0]]);for(var r,a=0;r=e[a];a++)r&&r.callback&&r.callback.call(r.elem,r.elem);t&&t.options.onceOnly&&1==t.firedElems.length&&t.me.unbindEventWithSelectorAndCallback.call(t.target,t.selector,t.callback)},checkChildNodesRecursively:function(e,t,r,a){for(var i,n=0;i=e[n];n++)r(i,t,a)&&a.push({callback:t.callback,elem:i}),0<i.childNodes.length&&u.checkChildNodesRecursively(i.childNodes,t,r,a)},mergeArrays:function(e,t){var r,a={};for(r in e)e.hasOwnProperty(r)&&(a[r]=e[r]);for(r in t)t.hasOwnProperty(r)&&(a[r]=t[r]);return a},toElementsArray:function(e){return e=void 0!==e&&("number"!=typeof e.length||e===c)?[e]:e}}),e=(l.prototype.addEvent=function(e,t,r,a){a={target:e,selector:t,options:r,callback:a,firedElems:[]};return this._beforeAdding&&this._beforeAdding(a),this._eventsBucket.push(a),a},l.prototype.removeEvent=function(e){for(var t,r=this._eventsBucket.length-1;t=this._eventsBucket[r];r--)e(t)&&(this._beforeRemoving&&this._beforeRemoving(t),(t=this._eventsBucket.splice(r,1))&&t.length&&(t[0].callback=null))},l.prototype.beforeAdding=function(e){this._beforeAdding=e},l.prototype.beforeRemoving=function(e){this._beforeRemoving=e},l),t=function(i,n){var o=new e,l=this,s={fireOnAttributesModification:!1};return o.beforeAdding(function(t){var e=t.target;e!==c.document&&e!==c||(e=document.getElementsByTagName("html")[0]);var r=new MutationObserver(function(e){n.call(this,e,t)}),a=i(t.options);r.observe(e,a),t.observer=r,t.me=l}),o.beforeRemoving(function(e){e.observer.disconnect()}),this.bindEvent=function(e,t,r){t=u.mergeArrays(s,t);for(var a=u.toElementsArray(this),i=0;i<a.length;i++)o.addEvent(a[i],e,t,r)},this.unbindEvent=function(){var r=u.toElementsArray(this);o.removeEvent(function(e){for(var t=0;t<r.length;t++)if(this===w||e.target===r[t])return!0;return!1})},this.unbindEventWithSelectorOrCallback=function(r){var a=u.toElementsArray(this),i=r,e="function"==typeof r?function(e){for(var t=0;t<a.length;t++)if((this===w||e.target===a[t])&&e.callback===i)return!0;return!1}:function(e){for(var t=0;t<a.length;t++)if((this===w||e.target===a[t])&&e.selector===r)return!0;return!1};o.removeEvent(e)},this.unbindEventWithSelectorAndCallback=function(r,a){var i=u.toElementsArray(this);o.removeEvent(function(e){for(var t=0;t<i.length;t++)if((this===w||e.target===i[t])&&e.selector===r&&e.callback===a)return!0;return!1})},this},i=new function(){var s={fireOnAttributesModification:!1,onceOnly:!1,existing:!1};function n(e,t,r){return!(!u.matchesSelector(e,t.selector)||(e._id===w&&(e._id=a++),-1!=t.firedElems.indexOf(e._id)))&&(t.firedElems.push(e._id),!0)}var c=(i=new t(function(e){var t={attributes:!1,childList:!0,subtree:!0};return e.fireOnAttributesModification&&(t.attributes=!0),t},function(e,i){e.forEach(function(e){var t=e.addedNodes,r=e.target,a=[];null!==t&&0<t.length?u.checkChildNodesRecursively(t,i,n,a):"attributes"===e.type&&n(r,i)&&a.push({callback:i.callback,elem:r}),u.callCallbacks(a,i)})})).bindEvent;return i.bindEvent=function(e,t,r){t=void 0===r?(r=t,s):u.mergeArrays(s,t);var a=u.toElementsArray(this);if(t.existing){for(var i=[],n=0;n<a.length;n++)for(var o=a[n].querySelectorAll(e),l=0;l<o.length;l++)i.push({callback:r,elem:o[l]});if(t.onceOnly&&i.length)return r.call(i[0].elem,i[0].elem);setTimeout(u.callCallbacks,1,i)}c.call(this,e,t,r)},i},o=new function(){var a={};function i(e,t){return u.matchesSelector(e,t.selector)}var n=(o=new t(function(){return{childList:!0,subtree:!0}},function(e,r){e.forEach(function(e){var t=e.removedNodes,e=[];null!==t&&0<t.length&&u.checkChildNodesRecursively(t,r,i,e),u.callCallbacks(e,r)})})).bindEvent;return o.bindEvent=function(e,t,r){t=void 0===r?(r=t,a):u.mergeArrays(a,t),n.call(this,e,t,r)},o};d(HTMLElement.prototype),d(NodeList.prototype),d(HTMLCollection.prototype),d(HTMLDocument.prototype),d(Window.prototype);var n={};return s(i,n,"unbindAllArrive"),s(o,n,"unbindAllLeave"),n}function l(){this._eventsBucket=[],this._beforeAdding=null,this._beforeRemoving=null}function s(e,t,r){u.addMethod(t,r,e.unbindEvent),u.addMethod(t,r,e.unbindEventWithSelectorOrCallback),u.addMethod(t,r,e.unbindEventWithSelectorAndCallback)}function d(e){e.arrive=i.bindEvent,s(i,e,"unbindArrive"),e.leave=o.bindEvent,s(o,e,"unbindLeave")}}(window,void 0),ewww_webp_supported=!1;function check_webp_feature(e,t){var r;ewww_webp_supported?t(ewww_webp_supported):((r=new Image).onload=function(){ewww_webp_supported=0<r.width&&0<r.height,t(ewww_webp_supported)},r.onerror=function(){t(!1)},r.src="data:image/webp;base64,"+{alpha:"UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==",animation:"UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA"}[e])}function ewwwLoadImages(e){if(e){for(var t=document.querySelectorAll(".batch-image img, .image-wrapper a, .ngg-pro-masonry-item a, .ngg-galleria-offscreen-seo-wrapper a"),r=0,a=t.length;r<a;r++)ewwwAttr(t[r],"data-src",t[r].getAttribute("data-webp")),ewwwAttr(t[r],"data-thumbnail",t[r].getAttribute("data-webp-thumbnail"));for(var i=document.querySelectorAll(".rev_slider ul li"),r=0,a=i.length;r<a;r++){ewwwAttr(i[r],"data-thumb",i[r].getAttribute("data-webp-thumb"));for(var n=1;n<11;)ewwwAttr(i[r],"data-param"+n,i[r].getAttribute("data-webp-param"+n)),n++}for(r=0,a=(i=document.querySelectorAll(".rev_slider img")).length;r<a;r++)ewwwAttr(i[r],"data-lazyload",i[r].getAttribute("data-webp-lazyload"));for(var o=document.querySelectorAll("div.woocommerce-product-gallery__image"),r=0,a=o.length;r<a;r++)ewwwAttr(o[r],"data-thumb",o[r].getAttribute("data-webp-thumb"))}for(var l=document.querySelectorAll("video"),r=0,a=l.length;r<a;r++)ewwwAttr(l[r],"poster",e?l[r].getAttribute("data-poster-webp"):l[r].getAttribute("data-poster-image"));for(var s,c=document.querySelectorAll("img.ewww_webp_lazy_load"),r=0,a=c.length;r<a;r++)e&&(ewwwAttr(c[r],"data-lazy-srcset",c[r].getAttribute("data-lazy-srcset-webp")),ewwwAttr(c[r],"data-srcset",c[r].getAttribute("data-srcset-webp")),ewwwAttr(c[r],"data-lazy-src",c[r].getAttribute("data-lazy-src-webp")),ewwwAttr(c[r],"data-src",c[r].getAttribute("data-src-webp")),ewwwAttr(c[r],"data-orig-file",c[r].getAttribute("data-webp-orig-file")),ewwwAttr(c[r],"data-medium-file",c[r].getAttribute("data-webp-medium-file")),ewwwAttr(c[r],"data-large-file",c[r].getAttribute("data-webp-large-file")),null!=(s=c[r].getAttribute("srcset"))&&!1!==s&&s.includes("R0lGOD")&&ewwwAttr(c[r],"src",c[r].getAttribute("data-lazy-src-webp"))),c[r].className=c[r].className.replace(/\bewww_webp_lazy_load\b/,"");for(var w=document.querySelectorAll(".ewww_webp"),r=0,a=w.length;r<a;r++)e?(ewwwAttr(w[r],"srcset",w[r].getAttribute("data-srcset-webp")),ewwwAttr(w[r],"src",w[r].getAttribute("data-src-webp")),ewwwAttr(w[r],"data-orig-file",w[r].getAttribute("data-webp-orig-file")),ewwwAttr(w[r],"data-medium-file",w[r].getAttribute("data-webp-medium-file")),ewwwAttr(w[r],"data-large-file",w[r].getAttribute("data-webp-large-file")),ewwwAttr(w[r],"data-large_image",w[r].getAttribute("data-webp-large_image")),ewwwAttr(w[r],"data-src",w[r].getAttribute("data-webp-src"))):(ewwwAttr(w[r],"srcset",w[r].getAttribute("data-srcset-img")),ewwwAttr(w[r],"src",w[r].getAttribute("data-src-img"))),w[r].className=w[r].className.replace(/\bewww_webp\b/,"ewww_webp_loaded");window.jQuery&&jQuery.fn.isotope&&jQuery.fn.imagesLoaded&&(jQuery(".fusion-posts-container-infinite").imagesLoaded(function(){jQuery(".fusion-posts-container-infinite").hasClass("isotope")&&jQuery(".fusion-posts-container-infinite").isotope()}),jQuery(".fusion-portfolio:not(.fusion-recent-works) .fusion-portfolio-wrapper").imagesLoaded(function(){jQuery(".fusion-portfolio:not(.fusion-recent-works) .fusion-portfolio-wrapper").isotope()}))}function ewwwWebPInit(e){ewwwLoadImages(e),ewwwNggLoadGalleries(e),document.arrive(".ewww_webp",function(){ewwwLoadImages(e)}),document.arrive(".ewww_webp_lazy_load",function(){ewwwLoadImages(e)}),document.arrive("videos",function(){ewwwLoadImages(e)}),"loading"==document.readyState?document.addEventListener("DOMContentLoaded",ewwwJSONParserInit):("undefined"!=typeof galleries&&ewwwNggParseGalleries(e),ewwwWooParseVariations(e))}function ewwwAttr(e,t,r){null!=r&&!1!==r&&e.setAttribute(t,r)}function ewwwJSONParserInit(){"undefined"!=typeof galleries&&check_webp_feature("alpha",ewwwNggParseGalleries),check_webp_feature("alpha",ewwwWooParseVariations)}function ewwwWooParseVariations(e){if(e)for(var t=document.querySelectorAll("form.variations_form"),r=0,a=t.length;r<a;r++){var i=t[r].getAttribute("data-product_variations"),n=!1;try{for(var o in i=JSON.parse(i))void 0!==i[o]&&void 0!==i[o].image&&(void 0!==i[o].image.src_webp&&(i[o].image.src=i[o].image.src_webp,n=!0),void 0!==i[o].image.srcset_webp&&(i[o].image.srcset=i[o].image.srcset_webp,n=!0),void 0!==i[o].image.full_src_webp&&(i[o].image.full_src=i[o].image.full_src_webp,n=!0),void 0!==i[o].image.gallery_thumbnail_src_webp&&(i[o].image.gallery_thumbnail_src=i[o].image.gallery_thumbnail_src_webp,n=!0),void 0!==i[o].image.thumb_src_webp&&(i[o].image.thumb_src=i[o].image.thumb_src_webp,n=!0));n&&ewwwAttr(t[r],"data-product_variations",JSON.stringify(i))}catch(e){}}}function ewwwNggParseGalleries(e){if(e)for(var t in galleries){var r=galleries[t];galleries[t].images_list=ewwwNggParseImageList(r.images_list)}}function ewwwNggLoadGalleries(e){e&&document.addEventListener("ngg.galleria.themeadded",function(e,t){window.ngg_galleria._create_backup=window.ngg_galleria.create,window.ngg_galleria.create=function(e,t){var r=$(e).data("id");return galleries["gallery_"+r].images_list=ewwwNggParseImageList(galleries["gallery_"+r].images_list),window.ngg_galleria._create_backup(e,t)}})}function ewwwNggParseImageList(e){for(var t in e){var r=e[t];if(void 0!==r["image-webp"]&&(e[t].image=r["image-webp"],delete e[t]["image-webp"]),void 0!==r["thumb-webp"]&&(e[t].thumb=r["thumb-webp"],delete e[t]["thumb-webp"]),void 0!==r.full_image_webp&&(e[t].full_image=r.full_image_webp,delete e[t].full_image_webp),void 0!==r.srcsets)for(var a in r.srcsets)nggSrcset=r.srcsets[a],void 0!==r.srcsets[a+"-webp"]&&(e[t].srcsets[a]=r.srcsets[a+"-webp"],delete e[t].srcsets[a+"-webp"]);if(void 0!==r.full_srcsets)for(var i in r.full_srcsets)nggFSrcset=r.full_srcsets[i],void 0!==r.full_srcsets[i+"-webp"]&&(e[t].full_srcsets[i]=r.full_srcsets[i+"-webp"],delete e[t].full_srcsets[i+"-webp"])}return e}check_webp_feature("alpha",ewwwWebPInit);</script><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W2XJT2J');</script>
+<!-- End Google Tag Manager -->
+
+<!-- CableLabs Tracking Script -->
+<script async="" src="../../analytics-scripts.cablelabs.com/analytics.js"></script>
+
+<!-- Woopra code starts here -->
+<script>
+    (function(){
+        var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="../../static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+    })("woopra");
+    woopra.config({"app":"wordpress","domain":"cablelabs.com","download_tracking":true,"outgoing_tracking":true,"hide_campaign":false});
+    woopra.track();
+</script>
+<!-- Woopra code ends here -->
+
+<script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "CableLabs",
+  "url" : " https://www.cablelabs.com/",
+  "sameAs" : [ "https://www.facebook.com/cablelabsinc/",
+    "https://twitter.com/cablelabs",
+    "https://www.linkedin.com/company/cablelabs",
+    "https://www.youtube.com/channel/UCWVEEclDccugM_EdO7YMKuQ"]
+}
+</script>
+    <script type="text/javascript">
+        var ajaxurl = 'https://www.cablelabs.com/wp-core/wp-admin/admin-ajax.php';
+        var template_directory_uri = 'https://www.cablelabs.com/wp-content/themes/cablelabs-v23';
+        var CABLELABS_GLOBALS = {
+            ajaxurl: 'https://www.cablelabs.com/wp-core/wp-admin/admin-ajax.php',
+            template_directory_uri: 'https://www.cablelabs.com/wp-content/themes/cablelabs-v23',
+        }
+    </script>
+    <script type="module" defer="" crossorigin="" src="../wp-content/themes/cablelabs-v23/dist/global.711c14974549e01cc5ed.js"></script><script type="text/javascript" defer="" nomodule="" src="../wp-content/themes/cablelabs-v23/dist/global.d2f6196a76af83c10ca8.js"></script><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v19.6 (Yoast SEO v19.13) - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="description" content="&nbsp;">
+	<link rel="canonical" href="https://www.cablelabs.com/specifications/search">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Specifications Search">
+	<meta property="og:description" content="&nbsp;">
+	<meta property="og:url" content="https://www.cablelabs.com/specifications/search">
+	<meta property="og:site_name" content="CableLabs">
+	<meta property="article:publisher" content="https://www.facebook.com/cablelabsinc">
+	<meta property="article:modified_time" content="2020-06-10T19:04:14+00:00">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@CableLabs">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.cablelabs.com/specifications/search","url":"https://www.cablelabs.com/specifications/search","name":"Specifications Search - CableLabs","isPartOf":{"@id":"https://www.cablelabs.com/#website"},"datePublished":"2013-10-17T04:26:21+00:00","dateModified":"2020-06-10T19:04:14+00:00","description":" ","breadcrumb":{"@id":"https://www.cablelabs.com/specifications/search#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.cablelabs.com/specifications/search"]}]},{"@type":"BreadcrumbList","@id":"https://www.cablelabs.com/specifications/search#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.cablelabs.com/"},{"@type":"ListItem","position":2,"name":"About Specifications","item":"https://www.cablelabs.com/specifications"},{"@type":"ListItem","position":3,"name":"Specifications Search"}]},{"@type":"WebSite","@id":"https://www.cablelabs.com/#website","url":"https://www.cablelabs.com/","name":"CableLabs","description":"We wake up every day to invent the future.","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.cablelabs.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel="dns-prefetch" href="http://cdnjs.cloudflare.com/">
+<link rel="dns-prefetch" href="http://cdn.rawgit.com/">
+<link href="https://vars.hotjar.com/" crossorigin="" rel="preconnect">
+<link href="https://script.hotjar.com/" crossorigin="" rel="preconnect">
+<link href="https://px.ads.linkedin.com/" crossorigin="" rel="preconnect">
+<link href="https://js.hs-analytics.net/" crossorigin="" rel="preconnect">
+<link href="https://js.hsadspixel.net/" crossorigin="" rel="preconnect">
+<link href="https://api.hubapi.com/" crossorigin="" rel="preconnect">
+<link href="https://forms.hsforms.com/" crossorigin="" rel="preconnect">
+<link href="https://js.hsforms.net/" crossorigin="" rel="preconnect">
+<link href="https://track.hubspot.com/" crossorigin="" rel="preconnect">
+<link href="https://www.woopra.com/" crossorigin="" rel="preconnect">
+<link href="https://connect.facebook.net/" crossorigin="" rel="preconnect">
+<link href="https://snap.licdn.com/" crossorigin="" rel="preconnect">
+<link href="https://static.hotjar.com/" crossorigin="" rel="preconnect">
+<link href="https://static.woopra.com/" crossorigin="" rel="preconnect">
+<link href="https://www.google-analytics.com/" crossorigin="" rel="preconnect">
+<link rel="alternate" type="application/rss+xml" title="CableLabs » Specifications Search Comments Feed" href="https://www.cablelabs.com/specifications/search/feed">
+<link rel="stylesheet" id="cl_reset-css" href="../wp-content/themes/cablelabs-v23/btp/css/reset6a4d.css?ver=6.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="cl_fonts-css" href="../wp-content/themes/cablelabs-v23/btp/css/fonts6a4d.css?ver=6.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="cl_global-css" href="../wp-content/themes/cablelabs-v23/btp/css/global6a4d.css?ver=6.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="has-style-frontend-css-css" href="../wp-content/plugins/highlight-and-share/dist/has-cts-style0527.css?ver=3.6.9" type="text/css" media="all">
+<link rel="stylesheet" id="classic-theme-styles-css" href="../wp-core/wp-includes/css/classic-themes.min68b3.css?ver=1" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="gdpr-css" href="../wp-content/plugins/gdpr/dist/css/public431f.css?ver=2.1.2" type="text/css" media="all">
+<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" id="cl_globalStyles-css" href="../wp-content/themes/cablelabs-v23/dist/globalStyles.5930f5614d36541052b26a4d.css?ver=6.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="highlight-and-share-email-css" href="../wp-content/plugins/highlight-and-share/css/highlight-and-share-emails0527.css?ver=3.6.9" type="text/css" media="all">
+<link rel="stylesheet" id="highlight-and-share-css" href="../wp-content/plugins/highlight-and-share/css/highlight-and-share0527.css?ver=3.6.9" type="text/css" media="all">
+<script type="text/javascript" src="../wp-core/wp-includes/js/jquery/jquery.mina7a0.js?ver=3.6.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="../wp-core/wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="../wp-content/plugins/svg-support/vendor/DOMPurify/DOMPurify.minf269.js?ver=1.0.1" id="bodhi-dompurify-library-js"></script>
+<script type="text/javascript" id="gdpr-js-extra">
+/* <![CDATA[ */
+var GDPR = {"ajaxurl":"https:\/\/www.cablelabs.com\/wp-core\/wp-admin\/admin-ajax.php","logouturl":"","i18n":{"aborting":"Aborting","logging_out":"You are being logged out.","continue":"Continue","cancel":"Cancel","ok":"OK","close_account":"Close your account?","close_account_warning":"Your account will be closed and all data will be permanently deleted and cannot be recovered. Are you sure?","are_you_sure":"Are you sure?","policy_disagree":"By disagreeing you will no longer have access to our site and will be logged out."},"is_user_logged_in":"","refresh":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../wp-content/plugins/gdpr/dist/js/public431f.js?ver=2.1.2" id="gdpr-js"></script>
+<script type="text/javascript" src="../wp-content/plugins/svg-support/js/min/svgs-inline-minf269.js?ver=1.0.1" id="bodhi_svg_inline-js"></script>
+<script type="text/javascript" id="bodhi_svg_inline-js-after">
+cssTarget="img.style-svg";ForceInlineSVGActive="false";frontSanitizationEnabled="on";
+</script>
+<script type="text/javascript" defer="" src="../../cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min6a4d.js?ver=6.1.1" id="angular_script-js"></script>
+<script type="text/javascript" defer="" src="../../cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min6a4d.js?ver=6.1.1" id="jquery_script-js"></script>
+<script type="text/javascript" defer="" src="../../cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min6a4d.js?ver=6.1.1" id="angular_ui_script-js"></script>
+<script type="text/javascript" defer="" src="../../cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-cookies.min6a4d.js?ver=6.1.1" id="angular_cookies_script-js"></script>
+<script type="text/javascript" defer="" src="../../cdn.jsdelivr.net/gh/zenorocha/clipboard.js%402.0/dist/clipboard.min.js?ver=6.1.1" id="clipboard_script-js"></script>
+<script type="text/javascript" defer="" src="../wp-content/themes/cablelabs-v23/specs_app/js/controllers6a4d.js?ver=6.1.1" id="specs_search_app_controllers_script-js"></script>
+<script type="text/javascript" defer="" src="../wp-content/themes/cablelabs-v23/specs_app/js/app6a4d.js?ver=6.1.1" id="specs_search_app_script-js"></script>
+<script type="text/javascript" defer="" src="../wp-content/themes/cablelabs-v23/specs_app/js/ngclipboard6a4d.js?ver=6.1.1" id="specs_search_app_ngclipboard_script-js"></script>
+<script type="text/javascript" defer="" src="../wp-content/themes/cablelabs-v23/specs_app/js/scripts6a4d.js?ver=6.1.1" id="specs_search_app_other_scripts-js"></script>
+<link rel="https://api.w.org/" href="https://www.cablelabs.com/wp-json/"><link rel="alternate" type="application/json" href="https://www.cablelabs.com/wp-json/wp/v2/pages/576"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.cablelabs.com/wp-core/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.cablelabs.com/wp-core/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.1.1">
+<link rel="shortlink" href="https://www.cablelabs.com/?p=576">
+<link rel="alternate" type="application/json+oembed" href="https://www.cablelabs.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.cablelabs.com%2Fspecifications%2Fsearch">
+<link rel="alternate" type="text/xml+oembed" href="https://www.cablelabs.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.cablelabs.com%2Fspecifications%2Fsearch&amp;format=xml">
+		<meta property="fb:pages" content="696084400453641">
+		    
+    <script type="text/javascript">
+        var ajaxurl = 'https://www.cablelabs.com/wp-core/wp-admin/admin-ajax.php';
+    </script>
+	
+	<!-- Woopra code starts here -->
+	<script>
+		(function(){
+		var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="../../static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+		})("woopra");
+		woopra.config({"app":"wordpress","domain":"cablelabs.com","download_tracking":true,"outgoing_tracking":true,"hide_campaign":false});
+		woopra.track();
+	</script>
+	<!-- Woopra code ends here -->
+	
+<noscript>&lt;style&gt;.lazyload[data-src]{display:none !important;}&lt;/style&gt;</noscript><style>.lazyload{background-image:none !important;}.lazyload:before{background-image:none !important;}</style><!-- There is no amphtml version available for this URL. -->		<style type="text/css" id="wp-custom-css">
+			.header-navigation__secondary-link {
+	color: #ffffff;
+}
+
+.header-navigation__secondary-link:hover,
+.header-navigation__secondary-link:focus {
+	color: #BEBEBE;
+}		</style>
+		    </head>
+
+    <!-- The 'has-body' class is for the highlight-and-share plugin, the styles wont apply correctly without this class -->
+    <body class="has-body">
+<script data-cfasync="false" data-no-defer="1">if(typeof ewww_webp_supported==="undefined"){var ewww_webp_supported=!1}if(ewww_webp_supported){document.body.classList.add("webp-support")}</script>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>&lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W2XJT2J"
+        height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+    	
+                <div class="page-container">
+                                            <header class="header-navigation" data-comp-header-navigation="">
+                    <nav class="header-navigation__wrapper">
+                        <div class="header-navigation__mobile-top" data-mobile-top="">
+    <a href="https://www.cablelabs.com/" class="header-navigation__logo header-navigation__hide-on-search">
+        <span class="screen-reader-only">CableLabs</span>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATQAAAAuAQMAAACcdXeVAAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABdJREFUOMtjYBgFo2AUjIJRMApGASEAAAcwAAEcjfspAAAAAElFTkSuQmCC" alt="CableLabs Logo" width="308" height="46" data-src="https://www.cablelabs.com/wp-content/themes/cablelabs-v23/btp/images/logo.png" decoding="async" class="lazyload"><noscript>&lt;img
+            src="../wp-content/themes/cablelabs-v23/btp/images/logo.png"
+            alt="CableLabs Logo"
+            width="308"
+            height="46"
+ data-eio="l" /&gt;</noscript>
+    </a>
+    <div data-search-form-container="mobile" style="margin-left: auto;">
+        <button class="header-navigation__search-button" aria-label="Open search" data-search-button="">
+            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.6607 13.817C14.8393 12.6384 15.4286 11.2232 15.4286 9.57143C15.4286 7.91964 14.8393 6.50893 13.6607 5.33928C12.4911 4.16071 11.0804 3.57143 9.42857 3.57143C7.77679 3.57143 6.36161 4.16071 5.18304 5.33928C4.01339 6.50893 3.42857 7.91964 3.42857 9.57143C3.42857 11.2232 4.01339 12.6384 5.18304 13.817C6.36161 14.9866 7.77679 15.5714 9.42857 15.5714C11.0804 15.5714 12.4911 14.9866 13.6607 13.817ZM22.2857 20.7143C22.2857 21.1786 22.1161 21.5804 21.7768 21.9196C21.4375 22.2589 21.0357 22.4286 20.5714 22.4286C20.0893 22.4286 19.6875 22.2589 19.3661 21.9196L14.7723 17.3393C13.1741 18.4464 11.3929 19 9.42857 19C8.15179 19 6.92857 18.7545 5.75893 18.2634C4.59821 17.7634 3.59375 17.0937 2.74554 16.2545C1.90625 15.4062 1.23661 14.4018 0.736607 13.2411C0.245536 12.0714 0 10.8482 0 9.57143C0 8.29464 0.245536 7.07589 0.736607 5.91518C1.23661 4.74553 1.90625 3.74107 2.74554 2.90178C3.59375 2.05357 4.59821 1.38393 5.75893 0.892856C6.92857 0.392856 8.15179 0.142856 9.42857 0.142856C10.7054 0.142856 11.9241 0.392856 13.0848 0.892856C14.2545 1.38393 15.2589 2.05357 16.0982 2.90178C16.9464 3.74107 17.6161 4.74553 18.1071 5.91518C18.6071 7.07589 18.8571 8.29464 18.8571 9.57143C18.8571 11.5357 18.3036 13.317 17.1964 14.9152L21.7902 19.5089C22.1205 19.8393 22.2857 20.2411 22.2857 20.7143Z" fill="white"></path>
+</svg>
+        </button>
+        <form class="header-navigation__search-form" action="https://www.cablelabs.com/" method="get" data-search-form="">
+    <div class="header-navigation__search-form-wrapper">
+        <input type="text" name="s" value="" placeholder="What are you looking for?" class="header-navigation__search-form-text">
+        <button type="submit" class="header-navigation__search-form-button btn btn--primary" data-search-form-submit="">Search</button>
+        <button type="button" class="header-navigation__search-form-close" aria-label="Close Search" data-search-form-close="">
+            <span></span>
+        </button>
+    </div>
+</form>
+    </div>
+    <button class="header-navigation__hamburger header-navigation__hide-on-search" data-mobile-menu-trigger="" aria-label="Menu dropdown trigger">
+        <span></span>
+    </button>
+</div>
+                        <div class="header-navigation__container">
+                            <ul class="header-navigation__list header-navigation__mobile-panel-content" data-mobile-panel-content="Main">
+                                <li class="header-navigation__hide-on-search">
+                                    <a href="https://www.cablelabs.com/" class="header-navigation__logo">
+                                        <span class="screen-reader-only">CableLabs</span>
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATQAAAAuAQMAAACcdXeVAAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABdJREFUOMtjYBgFo2AUjIJRMApGASEAAAcwAAEcjfspAAAAAElFTkSuQmCC" alt="CableLabs Logo" width="308" height="46" data-src="https://www.cablelabs.com/wp-content/themes/cablelabs-v23/btp/images/logo.png" decoding="async" class="lazyload"><noscript>&lt;img
+                                            src="../wp-content/themes/cablelabs-v23/btp/images/logo.png"
+                                            alt="CableLabs Logo"
+                                            width="308"
+                                            height="46"
+ data-eio="l" /&gt;</noscript>
+                                    </a>
+                                </li>
+                                
+                                        
+                                        <li class="header-navigation__hide-on-search-desktop-only">
+                                                                                            
+<button class="header-navigation__top-level-item header-navigation__top-level-item--has-subnav header-navigation__parent-item" data-sub-nav-list-item="" data-mobile-panel-trigger="technologies">
+    Technologies    <div class="header-navigation__chevron">
+        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L7.125 7.125L13.25 1" stroke="#fff" stroke-width="1.75"></path>
+</svg>
+    </div>
+</button>
+
+<div class="header-navigation__subnav header-navigation__subnav--has-secondary-column" data-subnav-menu="technologies">
+    <div class="header-navigation__mobile-panel-content" data-mobile-panel-content="technologies">
+        <button class="header-navigation__mobile-panel-title" data-mobile-panel-trigger="Main">
+            Technologies            <div class="header-navigation__chevron">
+                <svg fill="none" height="14" viewBox="0 0 9 14" width="9" xmlns="http://www.w3.org/2000/svg"><path d="m8.125.6875-6.125 6.125 6.125 6.125" stroke="currentColor" stroke-width="1.75"></path></svg>
+            </div>
+        </button>
+        <div class="header-navigation__subnav-content">
+            <div class="header-navigation__columns-layout">
+                <div class="header-navigation__primary-column">
+                    <div class="header-navigation__subnav-header">
+                        <div class="header-navigation__subnav-title">
+                            Technologies                        </div>
+                    </div>
+                                            <div class="header-navigation__primary-container">
+                                                                                            <a href="https://www.cablelabs.com/technologies" class="header-navigation__primary-link-group" target="">
+                                    <div class="header-navigation__primary-link
+                                                                                    ">
+                                        CableLabs Technologies                                    </div>
+                                                                            <p class="header-navigation__primary-link-description">Enabling one cohesive and seamless ecosystem.</p>
+                                                                    </a>
+                                                                                            <a href="https://www.cablelabs.com/10g" class="header-navigation__primary-link-group" target="">
+                                    <div class="header-navigation__primary-link
+                                                                                    ">
+                                        10G                                    </div>
+                                                                            <p class="header-navigation__primary-link-description">What is 10G? Why do we need the 10G platform?</p>
+                                                                    </a>
+                                                                                            <a href="https://www.cablelabs.com/connexus" class="header-navigation__primary-link-group" target="">
+                                    <div class="header-navigation__primary-link
+                                                                                    ">
+                                        Convergence                                    </div>
+                                                                            <p class="header-navigation__primary-link-description">Connexus; The nexus for mobile + fixed convergence</p>
+                                                                    </a>
+                                                                                            <a href="https://www.cablelabs.com/informed-insights" class="header-navigation__primary-link-group" target="">
+                                    <div class="header-navigation__primary-link
+                                                                                    ">
+                                        Technology Policy                                    </div>
+                                                                            <p class="header-navigation__primary-link-description">Access Inform[ED] Insights whitepapers</p>
+                                                                    </a>
+                                                                                            <a href="https://www.cablelabs.com/resources/open-source-projects" class="header-navigation__primary-link-group" target="">
+                                    <div class="header-navigation__primary-link
+                                                                                    ">
+                                        Open Source Projects                                    </div>
+                                                                            <p class="header-navigation__primary-link-description">These projects seek to align the industry, accelerate new tech and engage developers.</p>
+                                                                    </a>
+                                                    </div>
+                                    </div>
+
+                                    <div class="header-navigation__secondary-column">
+                                                                            <div class="header-navigation__subnav-title header-navigation__secondary-links-title">
+                                Featured Technologies                            </div>
+                                                                                                                                        <a href="https://www.cablelabs.com/technologies/docsis-4-0-technology" class="header-navigation__secondary-link">
+                                    DOCSIS 4.0 Technology                                </a>
+                                                                                                                                            <a href="https://www.cablelabs.com/technologies/docsis-3-1" class="header-navigation__secondary-link">
+                                    DOCSIS 3.1 Technology                                </a>
+                                                                                                                                            <a href="https://www.cablelabs.com/technologies/pon" class="header-navigation__secondary-link">
+                                    10G/25G/50G-PON                                </a>
+                                                                        </div>
+                            </div>
+        </div>
+    </div>
+</div>
+                                                                                    </li>
+                                        
+                                        
+                                        <li class="header-navigation__hide-on-search-desktop-only">
+                                                                                            
+<button class="header-navigation__top-level-item header-navigation__top-level-item--has-subnav header-navigation__parent-item" data-sub-nav-list-item="" data-mobile-panel-trigger="engage">
+    Engage    <div class="header-navigation__chevron">
+        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L7.125 7.125L13.25 1" stroke="#fff" stroke-width="1.75"></path>
+</svg>
+    </div>
+</button>
+
+<div class="header-navigation__subnav header-navigation__subnav--has-secondary-column" data-subnav-menu="engage">
+    <div class="header-navigation__mobile-panel-content" data-mobile-panel-content="engage">
+        <button class="header-navigation__mobile-panel-title" data-mobile-panel-trigger="Main">
+            Engage            <div class="header-navigation__chevron">
+                <svg fill="none" height="14" viewBox="0 0 9 14" width="9" xmlns="http://www.w3.org/2000/svg"><path d="m8.125.6875-6.125 6.125 6.125 6.125" stroke="currentColor" stroke-width="1.75"></path></svg>
+            </div>
+        </button>
+        <div class="header-navigation__subnav-content">
+            <div class="header-navigation__columns-layout">
+                <div class="header-navigation__primary-column">
+                    <div class="header-navigation__subnav-header">
+                        <div class="header-navigation__subnav-title">
+                            Engage                        </div>
+                    </div>
+                                            <div class="header-navigation__primary-container">
+                                                                                            <a href="https://www.cablelabs.com/news-events/events" class="header-navigation__primary-link-group" target="">
+                                    <div class="header-navigation__primary-link
+                                                                                    ">
+                                        Events                                    </div>
+                                                                            <p class="header-navigation__primary-link-description">In person &amp; virtual CableLabs-hosted events and webinars.</p>
+                                                                    </a>
+                                                                                            <a href="https://www.cablelabs.com/news-events/blog" class="header-navigation__primary-link-group" target="">
+                                    <div class="header-navigation__primary-link
+                                                                                    ">
+                                        Blog                                    </div>
+                                                                            <p class="header-navigation__primary-link-description">Catch up on the latest news and happenings at CableLabs.</p>
+                                                                    </a>
+                                                                                            <a href="https://www.cablelabs.com/news" class="header-navigation__primary-link-group" target="">
+                                    <div class="header-navigation__primary-link
+                                                                                    ">
+                                        In the News                                    </div>
+                                                                            <p class="header-navigation__primary-link-description">The latest CableLabs news and announcements</p>
+                                                                    </a>
+                                                                                            <a href="https://www.cablelabs.com/thenearfuture" class="header-navigation__primary-link-group" target="">
+                                    <div class="header-navigation__primary-link
+                                                                                    ">
+                                        The Near Future                                    </div>
+                                                                            <p class="header-navigation__primary-link-description">Our vision of the future of live, work, learn, and play.</p>
+                                                                    </a>
+                                                    </div>
+                                    </div>
+
+                                    <div class="header-navigation__secondary-column">
+                                                                            <div class="header-navigation__subnav-title header-navigation__secondary-links-title">
+                                Community                            </div>
+                                                                                                                                        <a href="https://www.cablelabs.com/become-a-member" class="header-navigation__secondary-link">
+                                    Become a Member                                </a>
+                                                                                                                                            <a href="https://www.cablelabs.com/become-a-vendor" class="header-navigation__secondary-link">
+                                    Become a Vendor                                </a>
+                                                                                                                                            <a href="https://www.cablelabs.com/university-partnerships" class="header-navigation__secondary-link">
+                                    University Partnerships                                </a>
+                                                                        </div>
+                            </div>
+        </div>
+    </div>
+</div>
+                                                                                    </li>
+                                        
+                                                                                    <li class="header-navigation__hide-on-search-desktop-only">
+                                                
+<button class="header-navigation__top-level-item header-navigation__top-level-item--has-subnav header-navigation__parent-item" data-sub-nav-list-item="" data-mobile-panel-trigger="specifications">
+    Specifications
+    <div class="header-navigation__chevron">
+        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L7.125 7.125L13.25 1" stroke="#fff" stroke-width="1.75"></path>
+</svg>
+    </div>
+</button>
+
+<div class="header-navigation__subnav header-navigation__subnav--has-secondary-column" data-subnav-menu="specifications">
+    <div class="header-navigation__mobile-panel-content" data-mobile-panel-content="specifications">
+        <button class="header-navigation__mobile-panel-title" data-mobile-panel-trigger="Main">
+            Specifications
+            <div class="header-navigation__chevron">
+                <svg fill="none" height="14" viewBox="0 0 9 14" width="9" xmlns="http://www.w3.org/2000/svg"><path d="m8.125.6875-6.125 6.125 6.125 6.125" stroke="currentColor" stroke-width="1.75"></path></svg>
+            </div>
+        </button>
+        <div class="header-navigation__subnav-content">
+            <div class="header-navigation__columns-layout">
+                <div class="header-navigation__specifications">
+                        <div class="specs-search specs-search--transparent-bg">
+        <div class="specs-search__container">
+
+            <div class="specs-search__heading">Search Specifications</div>
+            <form action="https://www.cablelabs.com/specifications/search/?" method="GET" class="specs-search__form">
+
+                <label class="specs-search__input">
+                  <input class="form-input" type="text" name="query" placeholder="Enter keyword or designation number">
+                  <span style="visibility: hidden;">Search Specifications</span>
+                </label>
+
+                <label class="specs-search__checkbox">
+                  <input class="form-checkbox" type="checkbox" name="content" value="true">
+                  <span class="form-label">Search File Content</span>
+                </label>
+
+                <label class="specs-search__checkbox">
+                  <input class="form-checkbox" type="checkbox" name="archives" value="true">
+                  <span class="form-label">Include Archives</span>
+                </label>
+
+                <div class="specs-search__dropdown">
+                    <label>
+                      <span class="form-label">Project Category</span>
+                      <div class="dropdown-select">
+                        <select name="category" data-specification-cat="" class="dropdown-select__input">
+                            <option value="" selected="" disabled="" hidden="">Select</option>
+                            <option value="">Any Category</option>
+                        </select>
+                      </div>
+                    </label>
+                </div>
+
+                <div class="specs-search__dropdown">
+                    <label>
+                      <span class="form-label">Subcategory</span>
+                      <div class="dropdown-select">
+                          <select name="subcat" data-specification-subcat="" class="dropdown-select__input">
+                              <option value="" selected="" disabled="" hidden="">Select</option>
+                              <option value="">Any Subcategory</option>
+                          </select>
+                      </div>
+                    </label>
+                </div>
+
+                <div class="specs-search__dropdown">
+                    <label>
+                      <span class="form-label">Document Type</span>
+                      <div class="dropdown-select">
+                          <select name="doctype" data-specification-type="" class="dropdown-select__input">
+                              <option value="" selected="" disabled="" hidden="">Select</option>
+                              <option value="">Any Document Type</option>
+                          </select>
+                      </div>
+                    </label>
+                </div>
+                <div class="specs-search__submit">
+                    <button type="submit" class="btn btn--primary">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>                                    </div>
+                                    <div class="header-navigation__secondary-column">
+                                                                                                                <a href="https://www.cablelabs.com/certification" class="header-navigation__primary-link-group">
+                                    <div class="header-navigation__primary-link">Certification</div>
+                                    <p class="header-navigation__primary-link-description">CableLabs facilitate the manufacture of interoperable cable devices</p>
+                                </a>
+                                                                                                                                            <a href="https://www.cablelabs.com/specifications" class="header-navigation__primary-link-group">
+                                    <div class="header-navigation__primary-link">About Specifications</div>
+                                    <p class="header-navigation__primary-link-description">Publicly available technical specifications</p>
+                                </a>
+                                                                        </div>
+                            </div>
+        </div>
+    </div>
+</div>
+                                            </li>
+                                        
+                                        <li class="header-navigation__hide-on-search-desktop-only">
+                                                                                            
+<button class="header-navigation__top-level-item header-navigation__top-level-item--has-subnav header-navigation__parent-item" data-sub-nav-list-item="" data-mobile-panel-trigger="about">
+    About    <div class="header-navigation__chevron">
+        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L7.125 7.125L13.25 1" stroke="#fff" stroke-width="1.75"></path>
+</svg>
+    </div>
+</button>
+
+<div class="header-navigation__subnav header-navigation__subnav--has-secondary-column" data-subnav-menu="about">
+    <div class="header-navigation__mobile-panel-content" data-mobile-panel-content="about">
+        <button class="header-navigation__mobile-panel-title" data-mobile-panel-trigger="Main">
+            About            <div class="header-navigation__chevron">
+                <svg fill="none" height="14" viewBox="0 0 9 14" width="9" xmlns="http://www.w3.org/2000/svg"><path d="m8.125.6875-6.125 6.125 6.125 6.125" stroke="currentColor" stroke-width="1.75"></path></svg>
+            </div>
+        </button>
+        <div class="header-navigation__subnav-content">
+            <div class="header-navigation__columns-layout">
+                <div class="header-navigation__primary-column">
+                    <div class="header-navigation__subnav-header">
+                        <div class="header-navigation__subnav-title">
+                            About                        </div>
+                    </div>
+                                            <div class="header-navigation__primary-container">
+                                                                                            <a href="https://www.cablelabs.com/about-cablelabs" class="header-navigation__primary-link-group" target="">
+                                    <div class="header-navigation__primary-link
+                                                                                    ">
+                                        About Us                                    </div>
+                                                                            <p class="header-navigation__primary-link-description">Learn more about how we wake up every day to invent the future.</p>
+                                                                    </a>
+                                                                                            <a href="https://www.cablelabs.com/about-cablelabs/the-team" class="header-navigation__primary-link-group" target="">
+                                    <div class="header-navigation__primary-link
+                                                                                    ">
+                                        The Team                                    </div>
+                                                                            <p class="header-navigation__primary-link-description">A team of diverse thinkers, collaborating to advance innovation for the evolving industry.</p>
+                                                                    </a>
+                                                                                            <a href="https://www.cablelabs.com/about-cablelabs/member-companies" class="header-navigation__primary-link-group" target="">
+                                    <div class="header-navigation__primary-link
+                                                                                    ">
+                                        List of Members                                    </div>
+                                                                            <p class="header-navigation__primary-link-description">View the Cable System Operators &amp; Mobile Operators that make up our ecosystem.</p>
+                                                                    </a>
+                                                                                            <a href="https://www.cablelabs.com/media" class="header-navigation__primary-link-group" target="">
+                                    <div class="header-navigation__primary-link
+                                                                                    ">
+                                        Media Inquiries                                    </div>
+                                                                            <p class="header-navigation__primary-link-description">Get involved with CableLabs through speaker requests and press announcements</p>
+                                                                    </a>
+                                                                                            <a href="https://www.cablelabs.com/home/contact-us" class="header-navigation__primary-link-group" target="">
+                                    <div class="header-navigation__primary-link
+                                                                                    ">
+                                        Contact                                    </div>
+                                                                            <p class="header-navigation__primary-link-description">Have questions? Reach out to us for answers.</p>
+                                                                    </a>
+                                                    </div>
+                                    </div>
+
+                                    <div class="header-navigation__secondary-column">
+                                                                            <div class="header-navigation__subnav-title header-navigation__secondary-links-title">
+                                Subsidiaries                            </div>
+                                                                                                                                        <a href="https://kyrio.com/" class="header-navigation__primary-link-group" target="_blank">
+                                    <div class="header-navigation__primary-link
+                                             header-navigation__primary-link--external                                        ">
+                                        Kyrio                                    </div>
+                                    <p class="header-navigation__primary-link-description">Testing, Certification and Software Services</p>
+                                </a>
+                                                                                                                                            <a href="https://www.scte.org/" class="header-navigation__primary-link-group" target="_blank">
+                                    <div class="header-navigation__primary-link
+                                             header-navigation__primary-link--external                                        ">
+                                        SCTE                                    </div>
+                                    <p class="header-navigation__primary-link-description">Education &amp; Standards Development</p>
+                                </a>
+                                                                        </div>
+                            </div>
+        </div>
+    </div>
+</div>
+                                                                                    </li>
+                                                                        <li style="margin-left: auto;">
+                                    <div class="header-navigation__desktop-only" data-search-form-container="desktop">
+                                        <button class="header-navigation__search-button" aria-label="Open search" data-search-button="">
+                                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.6607 13.817C14.8393 12.6384 15.4286 11.2232 15.4286 9.57143C15.4286 7.91964 14.8393 6.50893 13.6607 5.33928C12.4911 4.16071 11.0804 3.57143 9.42857 3.57143C7.77679 3.57143 6.36161 4.16071 5.18304 5.33928C4.01339 6.50893 3.42857 7.91964 3.42857 9.57143C3.42857 11.2232 4.01339 12.6384 5.18304 13.817C6.36161 14.9866 7.77679 15.5714 9.42857 15.5714C11.0804 15.5714 12.4911 14.9866 13.6607 13.817ZM22.2857 20.7143C22.2857 21.1786 22.1161 21.5804 21.7768 21.9196C21.4375 22.2589 21.0357 22.4286 20.5714 22.4286C20.0893 22.4286 19.6875 22.2589 19.3661 21.9196L14.7723 17.3393C13.1741 18.4464 11.3929 19 9.42857 19C8.15179 19 6.92857 18.7545 5.75893 18.2634C4.59821 17.7634 3.59375 17.0937 2.74554 16.2545C1.90625 15.4062 1.23661 14.4018 0.736607 13.2411C0.245536 12.0714 0 10.8482 0 9.57143C0 8.29464 0.245536 7.07589 0.736607 5.91518C1.23661 4.74553 1.90625 3.74107 2.74554 2.90178C3.59375 2.05357 4.59821 1.38393 5.75893 0.892856C6.92857 0.392856 8.15179 0.142856 9.42857 0.142856C10.7054 0.142856 11.9241 0.392856 13.0848 0.892856C14.2545 1.38393 15.2589 2.05357 16.0982 2.90178C16.9464 3.74107 17.6161 4.74553 18.1071 5.91518C18.6071 7.07589 18.8571 8.29464 18.8571 9.57143C18.8571 11.5357 18.3036 13.317 17.1964 14.9152L21.7902 19.5089C22.1205 19.8393 22.2857 20.2411 22.2857 20.7143Z" fill="white"></path>
+</svg>
+                                        </button>
+                                        <form class="header-navigation__search-form" action="https://www.cablelabs.com/" method="get" data-search-form="">
+    <div class="header-navigation__search-form-wrapper">
+        <input type="text" name="s" value="" placeholder="What are you looking for?" class="header-navigation__search-form-text">
+        <button type="submit" class="header-navigation__search-form-button btn btn--primary" data-search-form-submit="">Search</button>
+        <button type="button" class="header-navigation__search-form-close" aria-label="Close Search" data-search-form-close="">
+            <span></span>
+        </button>
+    </div>
+</form>
+                                    </div>
+                                </li>
+                                <li class="header-navigation__button-container header-navigation__hide-on-search-desktop-only">
+                                    <a href="https://account.cablelabs.com/" class="btn btn--grey header-navigation__button">Account Login</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </header>
+
+                <div class="header-navigation__dropdown-background"></div>
+                <div class="header-navigation__overlay"></div>
+
+                <div class="secondary-subheader content-wrapper content-wrapper--no-margins secondary-subheader--hidden">
+    <nav class="content-container" aria-label="Secondary subheader navigation">
+        <a class="secondary-subheader__menu-item secondary-subheader__menu-item--current" href="https://www.cablelabs.com/specifications/search">Search Specifications</a>
+        <a class="secondary-subheader__menu-item " href="https://www.cablelabs.com/certification">Certification</a>
+        <a class="secondary-subheader__menu-item " href="https://www.cablelabs.com/specifications">About Specifications</a>
+    </nav>
+</div>
+
+            
+
+<main>
+<base>
+<div class="specs-app specs-app--min-height-100vh" ng-app="searchApp">
+    <div ui-view=""></div>
+</div>
+
+
+<div class="split-cta content-wrapper content-wrapper--no-margins" data-specs-search="cta">
+    <div class="split-cta__wrapper">
+        <div class="split-cta__content">
+            <div class="split-cta__overlay lazyload" style="" data-back="../../www-res.cablelabs.com/wp-content/uploads/2017/10/28093105/joey-padden-octobox.jpg"></div>
+            <div class="split-cta__content--text">
+                <div class="split-cta__content--title">
+                    <h2><span style="color: #ffffff;">Learn More About CableLabs</span></h2>
+                </div>
+                                    <a href="http://www.cablelabs.com/about-cablelabs" class="btn btn--primary">About CableLabs</a>
+                            </div>
+        </div>
+    </div>
+    <div class="split-cta__wrapper">
+        <div class="split-cta__content">
+            <div class="split-cta__overlay lazyload" style="" data-back="../../www-res.cablelabs.com/wp-content/uploads/2016/10/28093537/Furthering_CableLabs_Innovation_Mission_through_University_Research_Ronald_Reuss.jpg"></div>
+            <div class="split-cta__content--text">
+                <div class="split-cta__content--title">
+                    <h2><span style="color: #ffffff;">Join the World’s Top Innovators Today</span></h2>
+<p>&nbsp;</p>
+                </div>
+                                    <a href="https://register.cablelabs.com/" class="btn btn--primary">Create an account</a>
+                            </div>
+        </div>
+    </div>
+</div>
+</main>
+
+            <footer class="site-footer">
+            <div class="site-footer__container">
+                <div class="site-footer__main">
+                    <div class="menu-nav-footer-container"><ul id="menu-nav-footer" class="menu"><li id="menu-item-21597" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-21597"><a href="https://www.cablelabs.com/technologies">Technologies</a>
+<ul class="sub-menu">
+	<li id="menu-item-19550" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19550"><a href="https://www.cablelabs.com/technologies">CableLabs Technologies</a></li>
+	<li id="menu-item-31380" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31380"><a href="https://www.cablelabs.com/connexus">Convergence</a></li>
+	<li id="menu-item-21602" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21602"><a href="https://www.cablelabs.com/10g">10G</a></li>
+	<li id="menu-item-31377" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31377"><a href="https://www.cablelabs.com/informed-insights">Technology Policy</a></li>
+	<li id="menu-item-24781" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24781"><a href="https://www.cablelabs.com/resources/open-source-projects">Open Source Projects</a></li>
+	<li id="menu-item-31379" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31379"><a href="https://www.cablelabs.com/resources">Resources</a></li>
+</ul>
+</li>
+<li id="menu-item-31390" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-31390"><a href="https://www.cablelabs.com/news-events/events">Engage</a>
+<ul class="sub-menu">
+	<li id="menu-item-174" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174"><a href="https://www.cablelabs.com/news-events/events">Events</a></li>
+	<li id="menu-item-9225" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9225"><a href="https://www.cablelabs.com/news-events/blog">Blog</a></li>
+	<li id="menu-item-176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176"><a href="https://www.cablelabs.com/news">In the News</a></li>
+	<li id="menu-item-31381" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31381"><a href="https://www.cablelabs.com/thenearfuture">The Near Future</a></li>
+	<li id="menu-item-23597" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23597"><a href="https://www.cablelabs.com/become-a-member">Become a Member</a></li>
+	<li id="menu-item-23596" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23596"><a href="https://www.cablelabs.com/become-a-vendor">Become a Vendor</a></li>
+	<li id="menu-item-24575" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24575"><a href="https://www.cablelabs.com/university-partnerships">University Partnerships</a></li>
+	<li id="menu-item-31382" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31382"><a href="https://account.cablelabs.com/">Account Login</a></li>
+</ul>
+</li>
+<li id="menu-item-167" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-has-children menu-item-167"><a href="https://www.cablelabs.com/specifications">Specifications</a>
+<ul class="sub-menu">
+	<li id="menu-item-31385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31385"><a href="https://www.cablelabs.com/certification">Certification</a></li>
+	<li id="menu-item-31386" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-31386"><a href="https://www.cablelabs.com/specifications">About Specifications</a></li>
+	<li id="menu-item-28365" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28365"><a href="http://www.cablelabs.com/specifications/search?query=&amp;category=CABLELABS&amp;subcat=&amp;doctype=&amp;content=false&amp;archives=false&amp;currentPage=1">CableLabs</a></li>
+	<li id="menu-item-28356" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28356"><a href="http://www.cablelabs.com/specifications/search?query=&amp;category=COHERENT%20OPTICS&amp;subcat=&amp;doctype=&amp;content=false&amp;archives=false&amp;currentPage=1">Coherent Optics</a></li>
+	<li id="menu-item-28357" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28357"><a href="http://www.cablelabs.com/specifications/search?query=&amp;category=DOCSIS&amp;subcat=&amp;doctype=&amp;content=false&amp;archives=false&amp;currentPage=1">DOCSIS</a></li>
+	<li id="menu-item-31383" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31383"><a href="http://www.cablelabs.com/specifications/search?query=&amp;category=DPOE&amp;subcat=&amp;doctype=&amp;content=false&amp;archives=false&amp;currentPage=1">DPOE</a></li>
+	<li id="menu-item-31384" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31384"><a href="http://www.cablelabs.com/specifications/search?query=&amp;category=DPOG&amp;subcat=&amp;doctype=&amp;content=false&amp;archives=false&amp;currentPage=1">DPOG</a></li>
+	<li id="menu-item-28360" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28360"><a href="http://www.cablelabs.com/specifications/search?query=&amp;category=METADATA&amp;subcat=&amp;doctype=&amp;content=false&amp;archives=false&amp;currentPage=1">MetaData</a></li>
+	<li id="menu-item-31387" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31387"><a href="http://www.cablelabs.com/specifications/search?query=&amp;category=PACKETCABLE&amp;subcat=&amp;doctype=&amp;content=false&amp;archives=false&amp;currentPage=1">PacketCable</a></li>
+	<li id="menu-item-28362" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28362"><a href="http://www.cablelabs.com/specifications/search?query=&amp;category=VIDEO&amp;subcat=&amp;doctype=&amp;content=false&amp;archives=false&amp;currentPage=1">Video</a></li>
+	<li id="menu-item-28363" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28363"><a href="http://www.cablelabs.com/specifications/search?query=&amp;category=WIRELESS&amp;subcat=&amp;doctype=&amp;content=false&amp;archives=false&amp;currentPage=1">Wireless</a></li>
+	<li id="menu-item-28364" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28364"><a href="http://www.cablelabs.com/specifications/search?query=&amp;category=SECURITY&amp;subcat=&amp;doctype=&amp;content=false&amp;archives=false&amp;currentPage=1">Security</a></li>
+	<li id="menu-item-28366" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28366"><a href="http://www.cablelabs.com/specifications/search?query=&amp;category=VIRTUALIZATION%20AND%20NETWORK%20EVOLUTION&amp;subcat=&amp;doctype=&amp;content=false&amp;archives=false&amp;currentPage=1">Virtualization and Network Evolution</a></li>
+</ul>
+</li>
+<li id="menu-item-17268" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-17268"><a href="https://www.cablelabs.com/about-cablelabs">About CableLabs</a>
+<ul class="sub-menu">
+	<li id="menu-item-28352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28352"><a href="https://www.cablelabs.com/about-cablelabs">About Us</a></li>
+	<li id="menu-item-153" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-153"><a href="https://www.cablelabs.com/about-cablelabs/the-team">The Team</a></li>
+	<li id="menu-item-149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a href="https://www.cablelabs.com/about-cablelabs/member-companies">List of Members</a></li>
+	<li id="menu-item-28353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28353"><a href="https://www.cablelabs.com/home/contact-us">Contact</a></li>
+	<li id="menu-item-181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-181"><a href="https://www.cablelabs.com/careers">Careers</a></li>
+	<li id="menu-item-603" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-603"><a href="https://www.cablelabs.com/media">Media Inquiries</a></li>
+	<li id="menu-item-17828" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17828"><a title="How can we help you?" href="https://www.cablelabs.com/faqs">FAQs</a></li>
+	<li id="menu-item-28354" class="subsidiary menu-item menu-item-type-custom menu-item-object-custom menu-item-28354"><a target="_blank" rel="noopener" href="https://www.kyrio.com/">Kyrio</a></li>
+	<li id="menu-item-28355" class="subsidiary menu-item menu-item-type-custom menu-item-object-custom menu-item-28355"><a target="_blank" rel="noopener" href="https://www.scte.org/">SCTE</a></li>
+</ul>
+</li>
+</ul></div>                </div>
+                <div class="site-footer__bottom">
+                    <a href="https://www.cpacanada.ca/webtrustseal?sealid=10924" target="_blank" aria-label="View Certification Authority" class="site-footer__security">
+                        <img class="security lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAACQAQMAAAClN35aAAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABVJREFUOMtjYBgFo2AUjIJRMAoIAwAGMAABS/KvDgAAAABJRU5ErkJggg==" alt="BDO security logo" width="80" height="144" data-src="https://www.cablelabs.com/wp-content/themes/cablelabs-v23/btp/images/bdo-security-logo-black.png" decoding="async"><noscript>&lt;img
+                            class="security"
+                            src="../wp-content/themes/cablelabs-v23/btp/images/bdo-security-logo-black.png"
+                            alt="BDO security logo"
+                            width="80"
+                            height="144"
+                         data-eio="l"&gt;</noscript>
+                    </a>
+                    <div class="site-footer__legal">
+                        <ul class="social"><li class="social-item linkedin"><a href="http://www.linkedin.com/company/14315" class="social-link" aria-label="CableLabs LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li><li class="social-item twitter"><a href="https://twitter.com/cablelabs" class="social-link" aria-label="CableLabs Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li><li class="social-item youtube"><a href="https://www.youtube.com/channel/UCWVEEclDccugM_EdO7YMKuQ" class="social-link" aria-label="CableLabs YouTube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li><li class="social-item facebook"><a href="https://www.facebook.com/cablelabsinc/" class="social-link" aria-label="CableLabs Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li></ul>                        <div class="site-footer__legal-links">
+                            <p>©2023 CableLabs</p>
+                            <a href="http://www.cablelabs.com/privacy-policy">Privacy Policy</a>
+                        </div>
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAAvAQMAAABjUGUsAAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABdJREFUOMtjYBgFo2AUjIJRMApGAU4AAAcpAAFyhF/aAAAAAElFTkSuQmCC" class="site-footer__logo lazyload" alt="CableLabs Logo" width="300" height="47" data-src="https://www.cablelabs.com/wp-content/themes/cablelabs-v23/btp/images/footer-logo.png" decoding="async"><noscript>&lt;img
+                            src="../wp-content/themes/cablelabs-v23/btp/images/footer-logo.png"
+                            class="site-footer__logo"
+                            alt="CableLabs Logo"
+                            width="300"
+                            height="47"
+ data-eio="l" /&gt;</noscript>
+                        <p>
+                            CableLabs is funded by its cable industry member companies as a non-profit Innovation and R&amp;D lab under Internal Revenue Code 501(c)(6) status.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+        <script type="text/javascript" id="hs-script-loader" async="" defer="" src="../../js.hs-scripts.com/1697621.js"></script>
+        <!-- End of HubSpot Embed Code -->
+    <div class="gdpr gdpr-overlay"></div>
+<div class="gdpr gdpr-privacy-bar" style="display:none;">
+	<div class="gdpr-wrapper">
+		<div class="gdpr-content">
+			<p>At cablelabs.com, we use cookies to improve your experience on our website. By browsing our website, you agree to our use of cookies.</p>
+		</div>
+		<div class="gdpr-right">
+						<div class="gdpr-buttons">
+				<button class="gdpr-preferences" type="button">Privacy Preferences</button>
+				<button class="gdpr-agreement" type="button">I Agree</button>
+			</div>
+			<span class="gdpr-close"></span>
+		</div>
+	</div>
+</div>
+
+<div class="gdpr gdpr-privacy-preferences">
+	<div class="gdpr-wrapper">
+		<form method="post" class="gdpr-privacy-preferences-frm">
+			<input type="hidden" name="action" value="gdpr_update_privacy_preferences">
+			<input type="hidden" id="update-privacy-preferences-nonce" name="update-privacy-preferences-nonce" value="a1dd5b2164"><input type="hidden" name="_wp_http_referer" value="OC-SP-OCAP1.1.3-100603.html">			<header>
+				<div class="gdpr-box-title">
+					<h3>Privacy Preference Center</h3>
+					<span class="gdpr-close"></span>
+				</div>
+			</header>
+			<div class="gdpr-mobile-menu">
+				<button type="button">Options</button>
+			</div>
+			<div class="gdpr-content">
+				<div class="gdpr-tabs">
+					<ul class="">
+						<li><button type="button" class="gdpr-tab-button gdpr-active" data-target="gdpr-consent-management">Consent Management</button></li>
+																			<li><button type="button" class="gdpr-tab-button gdpr-cookie-settings" data-target="strictly-necessary">Cookie Settings</button>
+								<ul class="gdpr-subtabs">
+									<li><button type="button" data-target="strictly-necessary">Strictly Necessary</button></li><li><button type="button" data-target="performance">Performance</button></li><li><button type="button" data-target="targeting">Targeting</button></li>								</ul>
+							</li>
+											</ul>
+					<ul class="gdpr-policies">
+																																</ul>
+				</div>
+				<div class="gdpr-tab-content">
+					<div class="gdpr-consent-management gdpr-active">
+						<header>
+							<h4>Consent Management</h4>
+						</header>
+						<div class="gdpr-info">
+							<p>When you visit any website, it may store or retrieve information on your browser, mostly in the form of cookies. This information might be about you, your preferences or your device and is mostly used to make the site work as you expect it to. The information does not usually directly identify you, but it can give you a more personalized web experience.</p>
+																								<div class="gdpr-cookies-used">
+										<div class="gdpr-cookie-title">
+											<p>Privacy Policy</p>
+																							<label class="gdpr-switch">
+													<input type="checkbox" name="user_consents[]" value="privacy-policy" checked="">
+													<span class="gdpr-slider round"></span>
+													<span class="gdpr-switch-indicator-on">ON</span>
+													<span class="gdpr-switch-indicator-off">OFF</span>
+												</label>
+																					</div>
+										<div class="gdpr-cookies">
+											<span>You read and agreed to our <a href="https://www.cablelabs.com/privacy-policy/" target="_blank">Privacy Policy</a>.</span>
+										</div>
+									</div>
+																					</div>
+					</div>
+																<div class="strictly-necessary">
+							<header>
+								<h4>Strictly Necessary</h4>
+							</header><!-- /header -->
+							<div class="gdpr-info">
+								<p>Cookies that are necessary for the site to function properly.</p>
+																	<div class="gdpr-cookies-used">
+										<div class="gdpr-cookie-title">
+											<p>Cookies Used</p>
+																																		<label class="gdpr-switch">
+													<input type="checkbox" class="gdpr-cookie-category" data-category="strictly-necessary" name="approved_cookies[]" value="[&quot;PHPSESSID&quot;,&quot;__cfduid&quot;,&quot;hubspotutk&quot;]" checked="checked">
+													<span class="gdpr-slider round"></span>
+													<span class="gdpr-switch-indicator-on">ON</span>
+													<span class="gdpr-switch-indicator-off">OFF</span>
+												</label>
+																					</div>
+										<div class="gdpr-cookies">
+											<span>PHPSESSID, __cfduid,hubspotutk</span>
+										</div>
+									</div>
+																							</div>
+						</div>
+											<div class="performance">
+							<header>
+								<h4>Performance</h4>
+							</header><!-- /header -->
+							<div class="gdpr-info">
+								<p>These are used to track user interaction and detect potential problems. These help us improve our services by providing analytical data on how users use this site.</p>
+																	<div class="gdpr-cookies-used">
+										<div class="gdpr-cookie-title">
+											<p>Cookies Used</p>
+																																		<label class="gdpr-switch">
+													<input type="checkbox" class="gdpr-cookie-category" data-category="performance" name="approved_cookies[]" value="[&quot;BizoID&quot;,&quot;wooTracker&quot;,&quot;GPS&quot;,&quot;_ga&quot;,&quot;_gat&quot;,&quot;_gid&quot;,&quot;_hjIncludedInSample&quot;,&quot;mailmunch_second_pageview&quot;]" checked="checked">
+													<span class="gdpr-slider round"></span>
+													<span class="gdpr-switch-indicator-on">ON</span>
+													<span class="gdpr-switch-indicator-off">OFF</span>
+												</label>
+																					</div>
+										<div class="gdpr-cookies">
+											<span>BizoID, wooTracker, GPS, _ga, _gat, _gid, _hjIncludedInSample, mailmunch_second_pageview</span>
+										</div>
+									</div>
+																							</div>
+						</div>
+											<div class="targeting">
+							<header>
+								<h4>Targeting</h4>
+							</header><!-- /header -->
+							<div class="gdpr-info">
+								<p>These cookies are used to (1) deliver advertisements more relevant to you and your interests; (2) limit the number of times you see an advertisement; (3) help measure the effectiveness of the advertising campaign; and (4) understand people’s behavior after they view an advertisement. </p>
+																	<div class="gdpr-cookies-used">
+										<div class="gdpr-cookie-title">
+											<p>Cookies Used</p>
+																																		<label class="gdpr-switch">
+													<input type="checkbox" class="gdpr-cookie-category" data-category="targeting" name="approved_cookies[]" value="[&quot;__hssc&quot;,&quot;__hssrc&quot;,&quot;__hstc&quot;,&quot;&quot;]" checked="checked">
+													<span class="gdpr-slider round"></span>
+													<span class="gdpr-switch-indicator-on">ON</span>
+													<span class="gdpr-switch-indicator-off">OFF</span>
+												</label>
+																					</div>
+										<div class="gdpr-cookies">
+											<span>__hssc, __hssrc, __hstc,</span>
+										</div>
+									</div>
+																							</div>
+						</div>
+									</div>
+				<input type="hidden" name="all_cookies" value="[&quot;PHPSESSID&quot;,&quot;__cfduid&quot;,&quot;hubspotutk&quot;,&quot;BizoID&quot;,&quot;wooTracker&quot;,&quot;GPS&quot;,&quot;_ga&quot;,&quot;_gat&quot;,&quot;_gid&quot;,&quot;_hjIncludedInSample&quot;,&quot;mailmunch_second_pageview&quot;,&quot;__hssc&quot;,&quot;__hssrc&quot;,&quot;__hstc&quot;,&quot;&quot;]">
+			</div>
+			<footer>
+				<input type="submit" value="Save Preferences">
+			</footer>
+		</form>
+	</div>
+</div>
+
+<div class="gdpr gdpr-general-confirmation">
+	<div class="gdpr-wrapper">
+		<header>
+			<div class="gdpr-box-title">
+				<h3></h3>
+				<span class="gdpr-close"></span>
+			</div>
+		</header>
+		<div class="gdpr-content">
+			<p></p>
+		</div>
+		<footer>
+			<button class="gdpr-ok" data-callback="closeNotification">OK</button>
+		</footer>
+	</div>
+</div>
+<script>
+              (function(e){
+                  var el = document.createElement('script');
+                  el.setAttribute('data-account', 'UZqZVP6RPM');
+                  el.setAttribute('src', '../../cdn.userway.org/widget.js');
+                  document.body.appendChild(el);
+                })();
+              </script><script data-account="UZqZVP6RPM" src="../../cdn.userway.org/widget.js"></script><div class="highlight-and-share-wrapper-inline highlight-and-share-wrapper"><div class="has_twitter" style="display: none;" data-type="twitter"><a href="https://twitter.com/intent/tweet?via=%username%&amp;url=%url%&amp;text=%prefix%%text%%suffix%&amp;hashtags=%hashtags%" target="_blank"><svg class="has-icon"><use xlink:href="#has-twitter-icon"></use></svg>&nbsp;Tweet</a></div></div><div class="highlight-and-share-wrapper-cts highlight-and-share-wrapper"><div class="has_twitter" style="display: none;" data-type="twitter"><a href="https://twitter.com/intent/tweet?via=%username%&amp;url=%url%&amp;text=%prefix%%text%%suffix%&amp;hashtags=%hashtags%" target="_blank"><svg class="has-icon"><use xlink:href="#has-twitter-icon"></use></svg>&nbsp;Tweet</a></div></div><div class="highlight-and-share-wrapper"><div class="has_twitter" style="display: none;" data-type="twitter"><a href="https://twitter.com/intent/tweet?via=%username%&amp;url=%url%&amp;text=%prefix%%text%%suffix%&amp;hashtags=%hashtags%" target="_blank"><svg class="has-icon"><use xlink:href="#has-twitter-icon"></use></svg>&nbsp;Tweet</a></div><div class="has_facebook" style="display: none;" data-type="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=%url%&amp;t=%title%" target="_blank"><svg class="has-icon"><use xlink:href="#has-facebook-icon"></use></svg>&nbsp;Share</a></div><div class="has_linkedin" style="display: none;" data-type="linkedin"><a href="https://www.linkedin.com/sharing/share-offsite/?mini=true&amp;url=%url%&amp;title=%title%" target="_blank"><svg class="has-icon"><use xlink:href="#has-linkedin-icon"></use></svg>&nbsp;LinkedIn</a></div></div><!-- #highlight-and-share-wrapper -->		<svg width="0" height="0" class="hidden" style="display: none;">
+			<symbol aria-hidden="true" data-prefix="fas" data-icon="twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="has-twitter-icon">
+				<path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+			</symbol>
+			<symbol aria-hidden="true" data-prefix="fas" data-icon="facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" id="has-facebook-icon">
+				<path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+			</symbol>
+			<symbol aria-hidden="true" data-prefix="fas" data-icon="at" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="has-email-icon">
+				<path fill="currentColor" d="M256 8C118.941 8 8 118.919 8 256c0 137.059 110.919 248 248 248 48.154 0 95.342-14.14 135.408-40.223 12.005-7.815 14.625-24.288 5.552-35.372l-10.177-12.433c-7.671-9.371-21.179-11.667-31.373-5.129C325.92 429.757 291.314 440 256 440c-101.458 0-184-82.542-184-184S154.542 72 256 72c100.139 0 184 57.619 184 160 0 38.786-21.093 79.742-58.17 83.693-17.349-.454-16.91-12.857-13.476-30.024l23.433-121.11C394.653 149.75 383.308 136 368.225 136h-44.981a13.518 13.518 0 0 0-13.432 11.993l-.01.092c-14.697-17.901-40.448-21.775-59.971-21.775-74.58 0-137.831 62.234-137.831 151.46 0 65.303 36.785 105.87 96 105.87 26.984 0 57.369-15.637 74.991-38.333 9.522 34.104 40.613 34.103 70.71 34.103C462.609 379.41 504 307.798 504 232 504 95.653 394.023 8 256 8zm-21.68 304.43c-22.249 0-36.07-15.623-36.07-40.771 0-44.993 30.779-72.729 58.63-72.729 22.292 0 35.601 15.241 35.601 40.77 0 45.061-33.875 72.73-58.161 72.73z"></path>
+			</symbol>
+			<symbol aria-hidden="true" data-prefix="fas" data-icon="linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="has-linkedin-icon">
+				<path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+			</symbol>
+			<symbol aria-hidden="true" data-prefix="fas" data-icon="xing" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" id="has-xing-icon">
+				<path fill="currentColor" d="M162.7 210c-1.8 3.3-25.2 44.4-70.1 123.5-4.9 8.3-10.8 12.5-17.7 12.5H9.8c-7.7 0-12.1-7.5-8.5-14.4l69-121.3c.2 0 .2-.1 0-.3l-43.9-75.6c-4.3-7.8.3-14.1 8.5-14.1H100c7.3 0 13.3 4.1 18 12.2l44.7 77.5zM382.6 46.1l-144 253v.3L330.2 466c3.9 7.1.2 14.1-8.5 14.1h-65.2c-7.6 0-13.6-4-18-12.2l-92.4-168.5c3.3-5.8 51.5-90.8 144.8-255.2 4.6-8.1 10.4-12.2 17.5-12.2h65.7c8 0 12.3 6.7 8.5 14.1z"></path>
+			</symbol>
+			<symbol aria-hidden="true" data-prefix="fas" data-icon="whatsapp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="has-whatsapp-icon">
+				<path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path>
+			</symbol>
+			<symbol aria-hidden="true" data-prefix="fas" data-icon="copy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="has-copy-icon">
+				<path fill="currentColor" d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z"></path>
+			</symbol>
+			<symbol aria-hidden="true" data-prefix="fas" data-icon="share" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="has-share-icon">
+				<path fill="currentColor" d="M352 320c-22.608 0-43.387 7.819-59.79 20.895l-102.486-64.054a96.551 96.551 0 0 0 0-41.683l102.486-64.054C308.613 184.181 329.392 192 352 192c53.019 0 96-42.981 96-96S405.019 0 352 0s-96 42.981-96 96c0 7.158.79 14.13 2.276 20.841L155.79 180.895C139.387 167.819 118.608 160 96 160c-53.019 0-96 42.981-96 96s42.981 96 96 96c22.608 0 43.387-7.819 59.79-20.895l102.486 64.054A96.301 96.301 0 0 0 256 416c0 53.019 42.981 96 96 96s96-42.981 96-96-42.981-96-96-96z"></path>
+			</symbol>
+			<symbol aria-hidden="true" data-prefix="fab" data-icon="reddit" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="has-reddit-icon">
+				<path fill="currentColor" d="M440.3 203.5c-15 0-28.2 6.2-37.9 15.9-35.7-24.7-83.8-40.6-137.1-42.3L293 52.3l88.2 19.8c0 21.6 17.6 39.2 39.2 39.2 22 0 39.7-18.1 39.7-39.7s-17.6-39.7-39.7-39.7c-15.4 0-28.7 9.3-35.3 22l-97.4-21.6c-4.9-1.3-9.7 2.2-11 7.1L246.3 177c-52.9 2.2-100.5 18.1-136.3 42.8-9.7-10.1-23.4-16.3-38.4-16.3-55.6 0-73.8 74.6-22.9 100.1-1.8 7.9-2.6 16.3-2.6 24.7 0 83.8 94.4 151.7 210.3 151.7 116.4 0 210.8-67.9 210.8-151.7 0-8.4-.9-17.2-3.1-25.1 49.9-25.6 31.5-99.7-23.8-99.7zM129.4 308.9c0-22 17.6-39.7 39.7-39.7 21.6 0 39.2 17.6 39.2 39.7 0 21.6-17.6 39.2-39.2 39.2-22 .1-39.7-17.6-39.7-39.2zm214.3 93.5c-36.4 36.4-139.1 36.4-175.5 0-4-3.5-4-9.7 0-13.7 3.5-3.5 9.7-3.5 13.2 0 27.8 28.5 120 29 149 0 3.5-3.5 9.7-3.5 13.2 0 4.1 4 4.1 10.2.1 13.7zm-.8-54.2c-21.6 0-39.2-17.6-39.2-39.2 0-22 17.6-39.7 39.2-39.7 22 0 39.7 17.6 39.7 39.7-.1 21.5-17.7 39.2-39.7 39.2z"></path>
+			</symbol>
+			<symbol aria-hidden="true" data-prefix="fab" data-icon="telegram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="has-telegram-icon">
+				<path fill="currentColor" d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"></path>
+			</symbol>
+			<symbol aria-hidden="true" data-prefix="fab" data-icon="signal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="has-signal-icon">
+				<g>
+					<path d="M97.2800192,3.739673 L100.160021,15.3787704 C88.8306631,18.1647705 77.9879854,22.6484879 68.0000023,28.6777391 L61.8399988,18.3985363 C72.8467373,11.7537029 84.7951803,6.81153332 97.2800192,3.739673 Z M158.720055,3.739673 L155.840053,15.3787704 C167.169411,18.1647705 178.012089,22.6484879 188.000072,28.6777391 L194.200075,18.3985363 C183.180932,11.7499974 171.218739,6.80771878 158.720055,3.739673 L158.720055,3.739673 Z M18.3999736,61.8351679 C11.7546212,72.8410466 6.81206547,84.7885562 3.73996516,97.2724198 L15.3799719,100.152197 C18.1661896,88.8237238 22.6502573,77.981893 28.6799796,67.9946902 L18.3999736,61.8351679 Z M11.9999699,127.990038 C11.9961044,122.172725 12.4306685,116.363392 13.2999707,110.611385 L1.43996383,108.811525 C-0.479938607,121.525138 -0.479938607,134.454937 1.43996383,147.168551 L13.2999707,145.36869 C12.4306685,139.616684 11.9961044,133.807351 11.9999699,127.990038 L11.9999699,127.990038 Z M194.160075,237.581539 L188.000072,227.302336 C178.024494,233.327885 167.195565,237.811494 155.880053,240.601305 L158.760055,252.240403 C171.231048,249.164732 183.165742,244.222671 194.160075,237.581539 L194.160075,237.581539 Z M244.000104,127.990038 C244.00397,133.807351 243.569406,139.616684 242.700103,145.36869 L254.56011,147.168551 C256.480013,134.454937 256.480013,121.525138 254.56011,108.811525 L242.700103,110.611385 C243.569406,116.363392 244.00397,122.172725 244.000104,127.990038 Z M252.260109,158.707656 L240.620102,155.827879 C237.833884,167.156352 233.349817,177.998183 227.320094,187.985385 L237.6001,194.184905 C244.249159,183.166622 249.191823,171.205364 252.260109,158.707656 L252.260109,158.707656 Z M145.380047,242.701142 C133.858209,244.43447 122.141865,244.43447 110.620027,242.701142 L108.820026,254.560223 C121.534632,256.479975 134.465442,256.479975 147.180048,254.560223 L145.380047,242.701142 Z M221.380091,196.804701 C214.461479,206.174141 206.175877,214.452354 196.800077,221.362797 L203.920081,231.022048 C214.262958,223.418011 223.404944,214.303705 231.040097,203.984145 L221.380091,196.804701 Z M196.800077,34.6172785 C206.177345,41.5338058 214.463023,49.8188367 221.380091,59.1953726 L231.040097,51.9959309 C223.429284,41.6822474 214.31457,32.5682452 204.000081,24.9580276 L196.800077,34.6172785 Z M34.619983,59.1953726 C41.5370506,49.8188367 49.8227288,41.5338058 59.1999972,34.6172785 L51.9999931,24.9580276 C41.6855038,32.5682452 32.5707896,41.6822474 24.9599774,51.9959309 L34.619983,59.1953726 Z M237.6001,61.8351679 L227.320094,67.9946902 C233.346114,77.969489 237.830073,88.7975718 240.620102,100.1122 L252.260109,97.2324229 C249.184198,84.7624043 244.241751,72.8286423 237.6001,61.8351679 L237.6001,61.8351679 Z M110.620027,13.2989317 C122.141865,11.5656035 133.858209,11.5656035 145.380047,13.2989317 L147.180048,1.43985134 C134.465442,-0.479901112 121.534632,-0.479901112 108.820026,1.43985134 L110.620027,13.2989317 Z M40.7799866,234.201801 L15.9999722,239.981353 L21.7799756,215.203275 L10.0999688,212.463487 L4.3199655,237.241566 C3.3734444,241.28318 4.58320332,245.526897 7.51859925,248.462064 C10.4539952,251.39723 14.6980441,252.606895 18.7399738,251.660448 L43.4999881,245.980888 L40.7799866,234.201801 Z M12.5999703,201.764317 L24.279977,204.484106 L28.2799793,187.305438 C22.4496684,177.507146 18.1025197,166.899584 15.3799719,155.827879 L3.73996516,158.707656 C6.34937618,169.311891 10.3154147,179.535405 15.539972,189.125297 L12.5999703,201.764317 Z M68.6000027,227.762301 L51.4199927,231.761991 L54.1399943,243.441085 L66.7800016,240.501313 C76.3706428,245.725462 86.5949557,249.691191 97.2000192,252.300398 L100.080021,240.6613 C89.0307035,237.906432 78.4495684,233.532789 68.6800027,227.682307 L68.6000027,227.762301 Z M128.000037,23.9980665 C90.1565244,24.0177003 55.3105242,44.590631 37.01511,77.715217 C18.7196958,110.839803 19.8628631,151.287212 39.9999861,183.325747 L29.9999803,225.982439 L72.660005,215.983214 C110.077932,239.548522 158.307237,236.876754 192.892851,209.322653 C227.478464,181.768552 240.856271,135.358391 226.242944,93.6248278 C211.629616,51.8912646 172.221191,23.9617202 128.000037,23.9980665 Z" fill="currentColor"></path>
+				</g>
+			</symbol>
+			<symbol aria-hidden="true" data-prefix="ok" data-icon="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="has-ok-icon">
+				<g>
+					<path fill="currentColor" d="M357.1,324.5c-24.1,15.3-57.2,21.4-79.1,23.6l18.4,18.1l67,67c24.5,25.1-15.4,64.4-40.2,40.2c-16.8-17-41.4-41.6-67-67.3
+						l-67,67.2c-24.8,24.2-64.7-15.5-39.9-40.2c17-17,41.4-41.6,67-67l18.1-18.1c-21.6-2.3-55.3-8-79.6-23.6
+						c-28.6-18.5-41.2-29.3-30.1-51.8c6.5-12.8,24.3-23.6,48-5c0,0,31.9,25.4,83.4,25.4s83.4-25.4,83.4-25.4c23.6-18.5,41.4-7.8,48,5
+						C398.3,295.1,385.7,305.9,357.1,324.5L357.1,324.5z M142,145c0-63,51.2-114,114-114s114,51,114,114c0,62.7-51.2,113.7-114,113.7
+						S142,207.7,142,145L142,145z M200,145c0,30.8,25.1,56,56,56s56-25.1,56-56c0-31.1-25.1-56.2-56-56.2S200,113.9,200,145z"></path>
+				</g>
+			</symbol>
+			<symbol aria-hidden="true" data-prefix="vk" data-icon="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" id="has-vk-icon">
+				<g style="fill:none;fill-rule:evenodd" transform="translate(0,664)">
+					<path fill="currentColor" d="m 1073.3513,-606.40537 h 196.278 c 179.2103,0 221.8795,42.66915 221.8795,221.8795 v 196.27799 c 0,179.2103512 -42.6692,221.879451 -221.8795,221.879451 h -196.278 c -179.21038,0 -221.87951,-42.6691298 -221.87951,-221.879451 v -196.27801 c 0,-179.21035 42.66913,-221.87946 221.87951,-221.87948 z"></path>
+					<path fill="currentColor" d="m 1375.0576,-393.98425 c 2.9513,-9.7072 0,-16.85429 -14.1342,-16.85429 h -46.6693 c -11.8763,0 -17.3521,6.16927 -20.3212,12.97854 0,0 -23.7347,56.82106 -57.3544,93.74763 -10.8806,10.66728 -15.8232,14.08081 -21.7613,14.08081 -2.969,0 -7.2715,-3.39577 -7.2715,-13.12075 v -90.83194 c 0,-11.66288 -3.4491,-16.85429 -13.3341,-16.85429 h -73.3553 c -7.4138,0 -11.8763,5.40476 -11.8763,10.54286 0,11.0406 16.8188,13.60078 18.5433,44.67814 v 67.52388 c 0,14.80973 -2.7202,17.49433 -8.6583,17.49433 -15.8231,0 -54.3143,-57.08773 -77.16,-122.40705 -4.4447,-12.71185 -8.9427,-17.83214 -20.8723,-17.83214 h -46.68718 c -13.3341,0 -16.0009,6.16925 -16.0009,12.97852 0,12.12515 15.8232,72.35973 73.69318,152.02656 38.58,54.40315 92.8942,83.89819 142.3726,83.89819 29.6729,0 33.3353,-6.54262 33.3353,-17.83216 v -41.12238 c 0,-13.10297 2.809,-15.71646 12.214,-15.71646 6.9338,0 18.7922,3.41353 46.4916,29.63728 31.6463,31.09512 36.8555,45.03372 54.6698,45.03372 h 46.6694 c 13.3341,0 20.0189,-6.54262 16.1787,-19.46781 -4.2313,-12.88962 -19.3433,-31.57515 -39.38,-53.74532 -10.8807,-12.62294 -27.2016,-26.22375 -32.1441,-33.03302 -6.9338,-8.72941 -4.9603,-12.62294 0,-20.39227 0,0 56.8566,-78.68897 62.7947,-105.41058 z"></path>
+					<path fill="currentColor" d="m 567.69877,-429.06912 c 3.15618,-10.38133 0,-18.0247 -15.11579,-18.0247 h -49.91013 c -12.70096,0 -18.55706,6.59763 -21.73232,13.87977 0,0 -25.38286,60.76685 -61.33724,100.25768 -11.63627,11.40806 -16.92197,15.05863 -23.27242,15.05863 -3.17519,0 -7.77644,-3.63156 -7.77644,-14.0319 v -97.13948 c 0,-12.47278 -3.68869,-18.0247 -14.26014,-18.0247 h -78.44923 c -7.92857,0 -12.70097,5.78005 -12.70097,11.27491 0,11.80736 17.98666,14.54527 19.83094,47.78071 v 72.21293 c 0,15.83815 -2.9091,18.70918 -9.25948,18.70918 -16.92197,0 -58.08598,-61.05206 -82.51817,-130.90731 -4.75337,-13.59458 -9.56381,-19.07042 -22.32175,-19.07042 h -49.92915 c -14.26014,0 -17.11213,6.59763 -17.11213,13.87977 0,12.96714 16.92197,77.38454 78.81059,162.58363 41.25909,58.18101 99.34506,89.72424 152.25931,89.72424 31.73343,0 35.65018,-6.99691 35.65018,-19.07043 v -43.978 c 0,-14.01288 3.00405,-16.80786 13.0622,-16.80786 7.41521,0 20.09716,3.65057 49.71998,31.69536 33.84387,33.25443 39.41486,48.16093 58.46622,48.16093 h 49.91026 c 14.26,0 21.40913,-6.99691 17.30216,-20.81966 -4.5252,-13.78473 -20.68653,-33.76783 -42.11468,-57.47752 -11.63621,-13.49953 -29.09043,-28.04479 -34.37631,-35.32694 -7.41508,-9.33557 -5.30458,-13.4995 0,-21.80835 0,0 60.80491,-84.15334 67.15549,-112.73048 z"></path>
+				</g>
+			</symbol>
+		</svg>
+		<script type="text/javascript" id="eio-lazy-load-js-before">
+var eio_lazy_vars = {"exactdn_domain":"","skip_autoscale":0,"threshold":0};
+</script>
+<script type="text/javascript" src="../wp-content/plugins/ewww-image-optimizer/includes/lazysizes.min04c3.js?ver=693" id="eio-lazy-load-js"></script>
+<script type="text/javascript" id="disqus_count-js-extra">
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"cablelabs"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../wp-content/plugins/disqus-comment-system/public/js/comment_countd92a.js?ver=3.0.22" id="disqus_count-js"></script>
+<script type="text/javascript" id="disqus_embed-js-extra">
+/* <![CDATA[ */
+var embedVars = {"disqusConfig":{"integration":"wordpress 3.0.22"},"disqusIdentifier":"576 \/?page_id=576","disqusShortname":"cablelabs","disqusTitle":"Specifications Search","disqusUrl":"https:\/\/www.cablelabs.com\/specifications\/search","postId":"576"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../wp-content/plugins/disqus-comment-system/public/js/comment_embedd92a.js?ver=3.0.22" id="disqus_embed-js"></script>
+<script type="text/javascript" src="../wp-content/plugins/highlight-and-share/js/sweetalert2.all.min1ba1.js?ver=7.28.4" id="sweetalert2-js"></script>
+<script type="text/javascript" src="../wp-core/wp-includes/js/dist/vendor/regenerator-runtime.min3937.js?ver=0.13.9" id="regenerator-runtime-js"></script>
+<script type="text/javascript" src="../wp-core/wp-includes/js/dist/vendor/wp-polyfill.min2c7c.js?ver=3.15.0" id="wp-polyfill-js"></script>
+<script type="text/javascript" src="../wp-core/wp-includes/js/dist/hooks.min6c65.js?ver=4169d3cf8e8d95a3d6d5" id="wp-hooks-js"></script>
+<script type="text/javascript" src="../wp-core/wp-includes/js/dist/i18n.mine57b.js?ver=9e794f35a71bb98672ae" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script type="text/javascript" id="highlight-and-share-js-extra">
+/* <![CDATA[ */
+var highlight_and_share = {"show_facebook":"1","show_twitter":"1","show_linkedin":"1","show_ok":"","show_vk":"","show_email":"","show_xing":"","show_copy":"","show_whatsapp":"","twitter_username":"CABLELABS","mobile":"","content":".blog-content-container,.has-content-area,.has-excerpt-area","tweet_text":"Tweet","facebook_text":"Share","linkedin_text":"LinkedIn","ok_text":"Odnoklassniki","vk_text":"VKontakte","whatsapp_text":"WhatsApp","xing_text":"Xing","copy_text":"Copy","email_text":"E-mail","icons":"","facebook_app_id":"393462617691837","email_your_name_value":"","email_from_value":"","nonce":"e9aa763b26","ajax_url":"https:\/\/www.cablelabs.com\/wp-core\/wp-admin\/admin-ajax.php","email_share":"Share This Post Via Email","email_subject":"Your Subject","email_your_name":"Your Name","email_send_email":"Send to Email Address","email_subject_text":"[Shared Post] %title%","email_from":"Your Email Address","email_send":"Send Email","email_cancel":"Cancel","email_close":"Close","email_loading":"https:\/\/www.cablelabs.com\/wp-content\/plugins\/highlight-and-share\/img\/loading.gif","email_subject_error":"You must fill in a subject.","email_email_to":"Send to Email Address is blank.","email_email_from":"Your email address is blank.","email_email_name":"Your name is blank.","email_sending":"Sending...","customizer_preview":"","prefix":"","suffix":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../wp-content/plugins/highlight-and-share/js/highlight-and-share0527.js?ver=3.6.9" id="highlight-and-share-js"></script>
+<script type="text/javascript" src="../wp-content/plugins/wp-rocket/assets/js/heartbeat0567.js?ver=3.12.4" id="heartbeat-js"></script>
+        <script type="text/javascript">
+            /* <![CDATA[ */
+           document.querySelectorAll("ul.nav-menu").forEach(
+               ulist => { 
+                    if (ulist.querySelectorAll("li").length == 0) {
+                        ulist.style.display = "none";
+
+                                            } 
+                }
+           );
+            /* ]]> */
+        </script>
+        
+
+
+<!-- Mirrored from www.cablelabs.com/specifications/OC-SP-OCAP1.1.3-100603.pdf by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 06:20:37 GMT -->
+
+</body></html>

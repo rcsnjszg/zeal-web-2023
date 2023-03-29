@@ -1,0 +1,51 @@
+<html><!-- Mirrored from interactive-examples.mdn.mozilla.net/pages/js/globalprops-decodeuri.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 06:19:52 GMT --><head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>JavaScript Demo: Standard built-in objects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../../css/codemirror-5-50-29fee.css?v=d23338a" rel="stylesheet">
+  <link href="../../css/editor-js9fee.css?v=d23338a" rel="stylesheet">
+  
+</head>
+
+<body>
+  <section id="static">
+    <pre><code id="static-js" data-height="">const uri = 'https://mozilla.org/?x=шеллы';
+const encoded = encodeURI(uri);
+console.log(encoded);
+// Expected output: "https://mozilla.org/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+
+try {
+  console.log(decodeURI(encoded));
+  // Expected output: "https://mozilla.org/?x=шеллы"
+} catch (e) { // Catches a malformed URI
+  console.error(e);
+}
+</code></pre>
+  </section>
+
+  <section id="live" class="live hidden">
+    <header class="output-header full-border">
+      <h4 class="output-heading">JavaScript Demo: Standard built-in objects - decodeURI()</h4>
+    </header>
+    <div id="editor" class="editor"></div>
+
+    <div class="output-container">
+      <div class="buttons-container">
+        <button id="execute" class="button run" type="button">Run ›</button>
+        <button id="reset" type="button" class="button">Reset</button>
+      </div>
+      <div id="console" class="output"><code></code></div>
+    </div>
+  </section>
+
+  
+
+  <script src="../../js/codemirror-5-50-29fee.js?v=d23338a"></script>
+  <script src="../../js/editor-js9fee.js?v=d23338a"></script>
+
+
+
+<!-- Mirrored from interactive-examples.mdn.mozilla.net/pages/js/globalprops-decodeuri.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 06:19:52 GMT -->
+
+</body></html>

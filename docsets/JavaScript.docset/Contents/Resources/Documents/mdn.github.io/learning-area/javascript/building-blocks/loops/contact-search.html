@@ -1,0 +1,48 @@
+<html><!-- Mirrored from mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 06:03:08 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Simple contact search example</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+
+  <label for="search">Search by contact name: </label>
+  <input id="search" type="text">
+  <button>Search</button>
+
+  <p></p>
+
+
+    <script>
+    const contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
+    const para = document.querySelector('p');
+    const input = document.querySelector('input');
+    const btn = document.querySelector('button');
+
+    btn.addEventListener('click', () => {
+      const searchName = input.value.toLowerCase();
+      input.value = '';
+      input.focus();
+      para.textContent = '';
+      for (let contact of contacts) {
+        let splitContact = contact.split(':');
+        if (splitContact[0].toLowerCase() === searchName) {
+          para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
+          break;
+        }
+      }
+      if (para.textContent === '') {
+       para.textContent = 'Contact not found.';
+     }
+    });
+
+    </script>
+
+  
+
+<!-- Mirrored from mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 06:03:08 GMT -->
+
+</body></html>

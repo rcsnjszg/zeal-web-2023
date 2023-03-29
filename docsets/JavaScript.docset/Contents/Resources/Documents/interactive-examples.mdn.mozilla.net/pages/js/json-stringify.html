@@ -1,0 +1,51 @@
+<html><!-- Mirrored from interactive-examples.mdn.mozilla.net/pages/js/json-stringify.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 05:55:47 GMT --><head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>JavaScript Demo: JSON.stringify()</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../../css/codemirror-5-50-29fee.css?v=d23338a" rel="stylesheet">
+  <link href="../../css/editor-js9fee.css?v=d23338a" rel="stylesheet">
+  
+</head>
+
+<body>
+  <section id="static">
+    <pre><code id="static-js" data-height="">console.log(JSON.stringify({ x: 5, y: 6 }));
+// Expected output: "{"x":5,"y":6}"
+
+console.log(JSON.stringify([new Number(3), new String('false'), new Boolean(false)]));
+// Expected output: "[3,"false",false]"
+
+console.log(JSON.stringify({ x: [10, undefined, function(){}, Symbol('')] }));
+// Expected output: "{"x":[10,null,null,null]}"
+
+console.log(JSON.stringify(new Date(2006, 0, 2, 15, 4, 5)));
+// Expected output: ""2006-01-02T15:04:05.000Z""
+</code></pre>
+  </section>
+
+  <section id="live" class="live hidden">
+    <header class="output-header full-border">
+      <h4 class="output-heading">JavaScript Demo: JSON.stringify()</h4>
+    </header>
+    <div id="editor" class="editor"></div>
+
+    <div class="output-container">
+      <div class="buttons-container">
+        <button id="execute" class="button run" type="button">Run ›</button>
+        <button id="reset" type="button" class="button">Reset</button>
+      </div>
+      <div id="console" class="output"><code></code></div>
+    </div>
+  </section>
+
+  
+
+  <script src="../../js/codemirror-5-50-29fee.js?v=d23338a"></script>
+  <script src="../../js/editor-js9fee.js?v=d23338a"></script>
+
+
+
+<!-- Mirrored from interactive-examples.mdn.mozilla.net/pages/js/json-stringify.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 05:55:47 GMT -->
+
+</body></html>

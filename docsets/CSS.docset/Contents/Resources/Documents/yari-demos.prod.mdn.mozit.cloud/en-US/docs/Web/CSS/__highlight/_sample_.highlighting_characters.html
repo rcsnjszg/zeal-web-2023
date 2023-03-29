@@ -1,0 +1,120 @@
+<html><!-- Mirrored from yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/CSS/::highlight/_sample_.highlighting_characters.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Feb 2023 23:00:19 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex, nofollow">
+        <style>
+            body {
+              padding: 0;
+              margin: 0;
+            }
+
+            svg:not(:root) {
+              display: block;
+            }
+
+            .playable-code {
+              background-color: #f4f7f8;
+              border: none;
+              border-left: 6px solid #558abb;
+              border-width: medium medium medium 6px;
+              color: #4d4e53;
+              height: 100px;
+              width: 90%;
+              padding: 10px 10px 0;
+            }
+
+            .playable-canvas {
+              border: 1px solid #4d4e53;
+              border-radius: 2px;
+            }
+
+            .playable-buttons {
+              text-align: right;
+              width: 90%;
+              padding: 5px 10px 5px 26px;
+            }
+        </style>
+        
+        <style>
+            #rainbow-text {
+  font-family: monospace;
+  font-size: 1.5rem;
+}
+
+::highlight(rainbow-color-1) {
+  color: #ad26ad;
+  text-decoration: underline;
+}
+::highlight(rainbow-color-2) {
+  color: #5d0a99;
+  text-decoration: underline;
+}
+::highlight(rainbow-color-3) {
+  color: #0000ff;
+  text-decoration: underline;
+}
+::highlight(rainbow-color-4) {
+  color: #07c607;
+  text-decoration: underline;
+}
+::highlight(rainbow-color-5) {
+  color: #b3b308;
+  text-decoration: underline;
+}
+::highlight(rainbow-color-6) {
+  color: #ffa500;
+  text-decoration: underline;
+}
+::highlight(rainbow-color-7) {
+  color: #ff0000;
+  text-decoration: underline;
+}
+
+        </style>
+        
+        <title>::highlight()</title>
+        
+    </head>
+    <body>
+        
+            <p id="rainbow-text">The CSS Custom Highlight API is not supported in this browser!</p>
+
+        
+        
+            <script>
+                const textNode = document.getElementById("rainbow-text").firstChild;
+
+if (!CSS.highlights) {
+  textNode.textContent =
+    "The CSS Custom Highlight API is not supported in this browser!";
+}
+
+// Create and register highlights for each color in the rainbow.
+const highlights = [];
+for (let i = 0; i < 7; i++) {
+  // Create a new highlight for this color.
+  const colorHighlight = new Highlight();
+  highlights.push(colorHighlight);
+
+  // Register this highlight under a custom name.
+  CSS.highlights.set(`rainbow-color-${i + 1}`, colorHighlight);
+}
+
+// Iterate over the text, character by character.
+for (let i = 0; i < textNode.textContent.length; i++) {
+  // Create a new range just for this character.
+  const range = new Range();
+  range.setStart(textNode, i);
+  range.setEnd(textNode, i + 1);
+
+  // Add the range to the next available highlight,
+  // looping back to the first one once we've reached the 7th.
+  highlights[i % 7].add(range);
+}
+
+            </script>
+        
+    
+
+<!-- Mirrored from yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/CSS/::highlight/_sample_.highlighting_characters.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Feb 2023 23:00:19 GMT -->
+</body></html>

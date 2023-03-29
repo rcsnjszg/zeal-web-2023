@@ -1,0 +1,39 @@
+<html><!-- Mirrored from mdn.github.io/web-components-examples/defined-pseudo-class/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Feb 2023 22:59:40 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+    <meta charset="utf-8">
+    <title>:defined demo</title>
+    <script src="main.js" defer=""></script>
+    <style>
+      p {
+        background: yellow;
+      }
+
+      simple-custom {
+        background: cyan;
+      }
+
+      :defined {
+        font-style: italic;
+      }
+
+      simple-custom:not(:defined) {
+        display: none;
+      }
+
+      simple-custom:defined {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><code>:defined</code> demo</h1>
+
+    <simple-custom text="Custom element example text"></simple-custom>
+
+    <p>Standard paragraph example text</p>
+
+  
+
+<!-- Mirrored from mdn.github.io/web-components-examples/defined-pseudo-class/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Feb 2023 22:59:40 GMT -->
+
+</body></html>

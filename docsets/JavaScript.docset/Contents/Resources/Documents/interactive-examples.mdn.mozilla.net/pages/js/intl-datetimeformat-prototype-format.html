@@ -1,0 +1,54 @@
+<html><!-- Mirrored from interactive-examples.mdn.mozilla.net/pages/js/intl-datetimeformat-prototype-format.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 06:31:02 GMT --><head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>JavaScript Demo: Intl.DateTimeFormat.prototype.format</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../../css/codemirror-5-50-29fee.css?v=d23338a" rel="stylesheet">
+  <link href="../../css/editor-js9fee.css?v=d23338a" rel="stylesheet">
+  
+</head>
+
+<body>
+  <section id="static">
+    <pre><code id="static-js" data-height="taller">const options1 = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+const date1 = new Date(2012, 5);
+
+const dateTimeFormat1 = new Intl.DateTimeFormat('sr-RS', options1);
+console.log(dateTimeFormat1.format(date1));
+// Expected output: "петак, 1. јун 2012."
+
+const dateTimeFormat2 = new Intl.DateTimeFormat('en-GB', options1);
+console.log(dateTimeFormat2.format(date1));
+// Expected output: "Friday, 1 June 2012"
+
+const dateTimeFormat3 = new Intl.DateTimeFormat('en-US', options1);
+console.log(dateTimeFormat3.format(date1));
+// Expected output: "Friday, June 1, 2012"
+</code></pre>
+  </section>
+
+  <section id="live" class="live hidden">
+    <header class="output-header full-border">
+      <h4 class="output-heading">JavaScript Demo: Intl.DateTimeFormat.prototype.format</h4>
+    </header>
+    <div id="editor" class="editor"></div>
+
+    <div class="output-container">
+      <div class="buttons-container">
+        <button id="execute" class="button run" type="button">Run ›</button>
+        <button id="reset" type="button" class="button">Reset</button>
+      </div>
+      <div id="console" class="output"><code></code></div>
+    </div>
+  </section>
+
+  
+
+  <script src="../../js/codemirror-5-50-29fee.js?v=d23338a"></script>
+  <script src="../../js/editor-js9fee.js?v=d23338a"></script>
+
+
+
+<!-- Mirrored from interactive-examples.mdn.mozilla.net/pages/js/intl-datetimeformat-prototype-format.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 06:31:02 GMT -->
+
+</body></html>

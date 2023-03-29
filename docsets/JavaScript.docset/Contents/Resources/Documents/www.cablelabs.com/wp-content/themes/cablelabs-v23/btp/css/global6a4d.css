@@ -1,0 +1,824 @@
+/*****SHARED STYLES*****/
+:root {
+  --focus-dark: 2px dotted #000;
+  --focus-light: 2px dotted #fff;
+  --focus-red: 2px dotted #e00015;
+  --heading-font: "utopia-std", Georgia, 'Times New Roman', Times, serif;
+  --body-font: "acumin-pro", sans-serif;
+}
+.cl-left {
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+.cl-right {
+    float: right;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+.cl-bg-red {
+    background-color: #e00016;
+}
+.cl-bg-black {
+    background-color: #000000;
+}
+.cl-bg-dark-grey {
+    background-color: #3a3a3a;
+}
+.cl-bg-grey {
+    background-color: #8a8a8a;
+}
+.cl-bg-light-grey {
+    background-color: #cccccc;
+}
+.cl-bg-super-light-grey {
+    background-color: #e9e9e9;
+}
+.cl-text-black {
+    color: #000000;
+}
+.cl-text-dark-grey {
+    color: #3a3a3a;
+}
+.cl-text-grey {
+    color: #8a8a8a;
+}
+.cl-text-red {
+    color: #e00016;
+}
+.cl-text-white {
+    color: #ffffff;
+}
+
+.cl-font-regular {
+    font-weight: 400;
+}
+.cl-font-bold {
+    font-weight: 600;
+}
+
+.cl-text-uppercase {
+    text-transform: uppercase;
+}
+
+.cl-standard-text h1 > *,
+.cl-standard-text h2 > *,
+.cl-standard-text h3 > *,
+.cl-standard-text h4 > *,
+.cl-standard-text h5 > *,
+.cl-standard-text h6 > * {
+  line-height: inherit;
+}
+
+.cl-standard-text h1,
+.cl-blog-text h1 {
+    font-family: var(--heading-font);
+    font-size: 50px;
+    line-height: 1.1;
+}
+.cl-standard-text h2,
+.cl-blog-text h2 {
+    font-family: var(--heading-font);
+    line-height: 1.1;
+    margin-bottom: 14px;
+}
+.cl-standard-text h2 {
+    font-size: 40px;
+}
+.cl-blog-text h2 {
+    font-size: 36px;
+}
+
+@media(min-width: 767px) {
+  .cl-standard-text h1 {
+    font-size: 60px;
+  }
+
+  .cl-standard-text h2 {
+    font-size: 48px;
+  }
+}
+
+.cl-standard-text h3,
+.cl-blog-text h3 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+.cl-standard-text h4,
+.cl-blog-text h4 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+.cl-standard-text h5,
+.cl-blog-text h5 {
+    font-size: 20px;
+    line-height: 1.2;
+}
+.cl-standard-text h6,
+.cl-blog-text h6 {
+    font-size: 11px;
+    line-height: 1.25em;
+}
+.cl-standard-text a,
+.cl-blog-text a {
+    color: #e00016;
+    text-decoration: none;
+}
+.cl-standard-text a:hover,
+.cl-standard-text a:focus,
+.cl-blog-text a:hover {
+    text-decoration: underline;
+}
+.cl-standard-text .invert,
+.cl-blog-text .invert {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: #000000;
+    padding: 5px;
+    float: left;
+}
+.cl-standard-text a.invert,
+.cl-blog-text a.invert {
+    color: white;
+    text-decoration: none;
+}
+.cl-standard-text a.invert:hover,
+.cl-blog-text a.invert:hover {
+    color: #e00016;
+    text-decoration: none;
+}
+.cl-blog-text a:focus {
+  outline: var(--focus-dark);
+}
+.cl-standard-text p {
+    font-family: var(--body-font);
+    font-size: 20px;
+    line-height: 1.4;
+}
+.cl-blog-text p {
+    font-family: var(--body-font);
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+.cl-blog-text .btn {
+    margin-bottom: 44px;
+}
+.cl-standard-text strong,
+.cl-standard-text b,
+.cl-blog-text strong,
+.cl-blog-text b {
+    font-weight: 600;
+}
+.cl-standard-text em,
+.cl-standard-text i,
+.cl-blog-text em,
+.cl-blog-text i {
+    font-style: italic;
+}
+.cl-standard-text i.fa,
+.cl-blog-text i.fa {
+    font-style: normal;
+}
+.cl-standard-text ul,
+.cl-standard-text ol {
+    font-family: var(--body-font);
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 20px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+.event-content-description > ul {
+    margin-bottom: 20px;
+}
+.cl-blog-text ul,
+.cl-blog-text ol {
+    font-family: var(--body-font);
+    font-weight: 400;
+    line-height: 1.75em;
+    font-size: 17px;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.cl-standard-text li {
+    padding-left: 12px;
+    margin-bottom: 20px;
+    line-height: 1.5em;
+}
+.cl-blog-text li {
+    padding-left: 12px;
+    margin-bottom: 20px;
+    line-height: 1.75em;
+}
+.cl-standard-text li:last-of-type,
+.cl-blog-text li:last-of-type {
+    margin-bottom: 0;
+}
+.cl-standard-text ul li,
+.cl-blog-text ul li {
+    list-style-type: square;
+}
+.cl-standard-text ol li,
+.cl-blog-text ol li {
+    list-style-type: decimal;
+}
+.cl-standard-text hr,
+.cl-blog-text hr {
+    border: none;
+    border-top: 1px solid #bebebe;
+    margin: 45px 0;
+}
+.cl-standard-text code,
+.cl-blog-text code,
+.cl-standard-text pre,
+.cl-blog-text pre {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 30px;
+    font-family: "Courier New", Courier, monospace;
+    background: #fff;
+    padding: 20px;
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+.cl-standard-text p code,
+.cl-blog-text p code,
+.cl-standard-text p pre,
+.cl-blog-text p pre {
+    margin-bottom: 0;
+}
+
+.cl-standard-text code.small,
+.cl-blog-text code.small,
+.cl-standard-text pre.small,
+.cl-blog-text pre.small {
+    font-size: 12px;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+
+.cl-play-button-container {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.cl-play-button {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.cl-play-button-link {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+.cl-play-button .cl-play-button-circle {
+    display: block;
+    margin: auto;
+    width: 74px;
+    height: 74px;
+    border-radius: 37px;
+    background: black;
+    opacity: 0.6;
+    text-align: center;
+    line-height: 74px;
+}
+.cl-play-button .cl-play-button-circle .fa-play {
+    color: #aeaeae;
+    font-size: 23px;
+    position: relative;
+    top: 3px;
+    left: 3px;
+}
+
+
+.cl-loader {
+    position: relative;
+    margin: 0 auto;
+    width: 50px;
+}
+.cl-loader:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+.cl-loader .circular {
+    animation: cl-loader-rotate 2s linear infinite;
+    height: 100%;
+    transform-origin: center center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.cl-loader .circular .path {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    animation: cl-loader-dash 1.5s ease-in-out infinite, cl-loader-color 6s ease-in-out infinite;
+    stroke-linecap: square;
+}
+.cl-label {
+    margin-left: 22px;
+    margin-bottom: 8px;
+    display: block;
+    font-size: 1rem;
+}
+.cl-input {
+    display: block;
+    float: left;
+    width: 100%;
+    height: 55px;
+    line-height: 1.4;
+    padding: 15px 22px;
+    font-size: 18px;
+    border: 0;
+    border-radius: 30px;
+    background-color: #fff;
+    outline: 2px solid #f3f3f3;
+    transition: 0.2s outline-color ease;
+}
+.cl-input:focus,
+.cl-input:focus-visible {
+    outline: 2px solid #f3f3f3;
+    border: 0;
+}
+.cl-select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%);
+    background-position: calc(100% - 25px) calc(1.4em + 2px), calc(100% - 20px) calc(1.4em + 2px);
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+}
+.cl-textarea {
+    min-height: 150px;
+}
+.cl-checkbox {
+    position: absolute;
+    z-index: -1000;
+    left: -1000px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+label.cl-checkbox-label {
+    background-image:url(../images/checkbox.png);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.cl-checkbox + label.cl-checkbox-label {
+    padding-left: 38px;
+    height: 28px;
+    display: inline-block;
+    line-height: 28px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 18px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.cl-checkbox:checked + label.cl-checkbox-label {
+    background-position: 0 -28px;
+}
+.cl-button {
+    padding: 1rem 1.5rem 1.075rem;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 100px;
+    line-height: 1;
+    color: #fff;
+    background-size: 250%;
+    background-position: left;
+    transition: 0.2s all ease-in-out;
+    background-image: linear-gradient(to right, #1c1c1c, #353535, #353535, #1c1c1c);
+}
+.cl-button:hover {
+    text-decoration: none;
+    background-position: right;
+}
+.cl-button:focus {
+  outline: var(--focus-dark);
+}
+.cl-button-primary,
+a.cl-button-primary {
+    background-image: linear-gradient(to right, #e00016, #980D50, #980D50, #e00016);
+}
+.cl-button-primary:hover,
+a.cl-button-primary:hover {
+    color: white;
+}
+.cl-standard-text .cl-button-primary {
+  color: #fff;
+}
+.cl-standard-text .cl-button-primary:hover {
+text-decoration-line: none;
+}
+.cl-button-secondary,
+a.cl-button-secondary {
+    background-image: none;
+    background: #e9e9e9;
+    color: #5f5f5f;
+}
+.cl-button-secondary:hover,
+a.cl-button-secondary:hover,
+.cl-button-secondary:focus,
+a.cl-button-secondary:focus{
+    color: #e00016;
+    text-decoration: none;
+}
+.cl-button-yellow,
+a.cl-button-yellow {
+    background-image: none;
+    background: #f7ba00;
+    color: white;
+}
+.cl-button-yellow:hover,
+a.cl-button-yellow:hover,
+.cl-button-yellow:focus,
+a.cl-button-yellow:focus{
+    background: #dea700;
+    text-decoration: none;
+    color: white;
+}
+.cl-button-gray,
+a.cl-button-gray {
+    background-image: none;
+    background: #E9E9E9;
+    color: #5f5f5f;
+}
+.cl-button-gray:hover,
+a.cl-button-gray:hover,
+.cl-button-gray:focus,
+a.cl-button-gray:focus{
+    background: #d4d3d3;
+    text-decoration: none;
+    color: #5f5f5f;
+}
+.cl-button-full-width {
+    background-image: none;
+    display: block;
+    width: 100%;
+}
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body {
+    min-width: 320px;
+    background: #f3f3f3;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+html, body {
+  font-size: 16px !important;
+}
+img {
+    -ms-interpolation-mode: bicubic;
+}
+.video-container {
+    position:relative;
+    padding-bottom:56.25%;
+    margin-top:30px;
+    height:0;
+    overflow:hidden;
+}
+.video-container iframe, .video-container object, .video-container embed {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+/* Prevent flash of animated content on page load (wow.js - solution found here: https://github.com/matthieua/WOW/issues/33) */
+.wow {
+    visibility: hidden;
+}
+.share-header {
+    padding: 42px 0;
+}
+.share-header h1 {
+    font-size: 50px;
+    line-height: 62px;
+    font-weight: 400;
+    color: #000;
+    display: inline-block;
+}
+.share-header .share-links {
+    margin-top: 20px;
+    display: inline-block;
+    float: right;
+}
+.share-header .share-links li {
+    padding: 0 4px;
+    font-size: 21px;
+    color: #666;
+    display: inline-block;
+    float: left;
+}
+.share-header .share-links li a {
+    color: #666;
+    text-decoration: none;
+    width: 50px;
+    text-align: center;
+    display: block;
+}
+.share-header .share-links li a:focus {
+  outline: var(--focus-dark);
+}
+.share-header .share-links li:first-child {
+    padding-left: 0;
+    padding-right: 46px;
+}
+.max-width {
+    margin: auto;
+    max-width: 1280px;
+    padding: 0 40px;
+    position: relative;
+}
+.content-max-width {
+    margin: auto;
+    max-width: 1275px;
+    padding: 0 75px;
+    position: relative;
+}
+
+/* Loader keyframes */
+@keyframes cl-loader-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes cl-loader-dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35px;
+    }
+    100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -124px;
+    }
+}
+@keyframes cl-loader-color {
+    100%,
+    0% {
+        stroke: #e00016;
+    }
+}
+
+/* FadeIn left/right/up/down small keyframes */
+@keyframes fadeInLeftSmall {
+    0% {
+        opacity: 0;
+        transform: translate3d(-5%, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+.fadeInLeftSmall {
+    animation-name: fadeInLeftSmall
+}
+@keyframes fadeInRightSmall {
+    0% {
+        opacity: 0;
+        transform: translate3d(5%, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+.fadeInRightSmall {
+    animation-name: fadeInRightSmall
+}
+@keyframes fadeInUpSmall {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 5%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+.fadeInUpSmall {
+    animation-name: fadeInUpSmall
+}
+@keyframes fadeInDownSmall {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -5%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+.fadeInDownSmall {
+    animation-name: fadeInDownSmall
+}
+
+@media(max-width: 1280px) {
+    .max-width {
+        max-width: 1280px;
+        padding: 0 40px;
+    }
+    .content-max-width {
+        max-width: 1275px;
+        padding: 0 75px;
+    }
+}
+
+@media(max-width: 1023px) {
+    .share-header .share-links li:first-child {
+        padding-right: 18px;
+    }
+    .share-header .share-links li {
+        font-size: 16px;
+    }
+    .share-header .share-links li a {
+        width: 32px;
+    }
+}
+
+@media(max-width: 767px) {
+    body {
+        position: relative;
+    }
+    .page-container {
+        overflow-x: hidden;
+    }
+    .cl-blog-text p {
+        font-family: var(--body-font);
+        font-weight: 400;
+        line-height: 1.4;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .cl-blog-text ul,
+    .cl-blog-text ol {
+        font-family: var(--body-font);
+        font-weight: 400;
+        line-height: 1.4;
+        font-size: 20px;
+        margin-left: 30px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .content-max-width {
+        padding: 0 40px;
+    }
+    .share-header {
+        padding: 0 0 0 15px;
+    }
+    .share-header h1 {
+        font-size: 40px;
+        line-height: 40px;
+        margin-top: 10px;
+    }
+    .share-header h1,
+    .share-header .share-links {
+        display: block;
+        float: none;
+    }
+}
+
+@media(max-width: 600px) {
+    .share-header .share-links li {
+        float: none;
+    }
+}
+
+.cl-top-bottom-spacing {
+    padding: 100px 0;
+}
+
+@media(max-width: 1130px) {
+    .cl-top-bottom-spacing {
+        padding: 50px 40px 60px;
+    }
+}
+
+@media(max-width: 725px) {
+    .cl-top-bottom-spacing {
+        padding: 50px 20px 60px;
+    }
+}
+
+/*************************************
+COOKIEBOT PLUGIN OVERRIDES (GDPR COMPLIANCE)
+**************************************/
+#CybotCookiebotDialogPoweredbyLink,
+#CybotCookiebotDialogBodyLevelButtonsSelectPane,
+#CybotCookiebotDialogBodyContentTitle {
+    display: none !important;
+}
+#CybotCookiebotDialog {
+    box-shadow: none !important;
+    padding-bottom: 4px !important;
+}
+#CybotCookiebotDialogBody {
+    padding-right: 0 !important;
+    max-width: 755px !important;
+}
+#CybotCookiebotDialogBodyLevelDetailsWrapper {
+    border: 1px solid #cccccc !important;
+    padding: 2px 0 2px 4px !important;
+}
+#CybotCookiebotDialogBodyContent {
+    padding-left: 0 !important;
+    float: left;
+    max-width: calc(100% - 200px) !important;
+}
+#CybotCookiebotDialogBodyLevelButtons {
+    margin-left: 0 !important;
+    float: right !important;
+    margin-right: 10px !important;
+}
+#CybotCookiebotDialogDetailBody {
+    max-width: 755px !important;
+}
+a#CybotCookiebotDialogBodyLevelButtonAccept {
+    background-color: #e00016 !important;
+    border: 1px solid #e00016 !important;
+}
+a#CybotCookiebotDialogBodyLevelButtonAccept:hover {
+    background-color: #cd1017 !important;
+    border: 1px solid #cd1017 !important;
+}
+a#CybotCookiebotDialogBodyLevelButtonAccept:focus {
+    outline: none !important;
+}
+#CybotCookiebotDialogBodyLevelButtonsTable,
+a#CybotCookiebotDialogBodyLevelButtonAccept {
+    margin-top: 12px !important;
+}
+
+@media(max-width: 767px) {
+    #CybotCookiebotDialogBodyContent {
+        max-width: 100% !important;
+        float: none !important;
+        padding: 12px 30px 5px 30px !important;
+    }
+    #CybotCookiebotDialogBodyLevelButtons {
+        padding: 0 0 12px 30px !important;
+        float: left !important;
+    }
+    #CybotCookiebotDialogBodyLevelButtonAcceptWrapper {
+        padding: 0 30px 12px 0 !important;
+    }
+    #CybotCookiebotDialogDetail {
+        padding: 0 30px 5px 30px !important;
+    }
+}
+
+.page-header, .document-toc-container, .loading-bar, #nav-access, .sidebar, .newsletter-container, .metadata {display:none !important} .content-layout {grid-template-columns: 100% !important; grid-template-rows: 1fr !important; grid-template-areas: 'main' !important;} .blockIndicator, .geckoVersionNote, .inheritsbox, .note, .notice, .overheadIndicator, .standardNoteBlock, .warning, .text-content p, .text-content dl, .text-content ol, .text-content ul {max-width:none !important; } #wikiArticle {border-bottom: none !important} .content-layout {max-width:none !important} .live .example-choice {align-items: initial} .article {padding: 30px 12px 30px 12px !important} .nav-footer {margin:0 -12px !important} .nav-footer {padding:60px 20px !important} .archived {position:static !important} #react-container > #nav-footer {display:none !important} .document-page .page-content-container {display:block !important} .locale-container {display:none !important} .bc-table .bc-history-link, .bc-table .ic-footnote {display:none !important} .ic-prefix {height:36px !important} .breadcrumb-locale-container {display:block} .article dl, .article ol, .article p, .article ul {max-width:none !important} .breadcrumbs li, .breadcrumbs li a {display:inline !important} .page-wrapper {display:block !important} .main-page-content dl, .main-page-content ol, .main-page-content p, .main-page-content ul {max-width:none !important} .language-toggle {display:none !important} .breadcrumb-locale-container {margin-top: 0 !important} .main-page-content iframe {width:100%} .toc, #sidebar-quicklinks, .top-navigation, .article-actions {display:none !important} .article-wrapper {display:block !important} .table-scroll {width:100% !important; margin:0 0 !important;} .article-actions-container {min-height:24px !important; max-height:24px !important;} .breadcrumbs-container li {font-size:13px !important; line-height:1.3; -webkit-text-size-adjust:none !important;} .article-actions-container .container {padding-left: 10px !important; padding-right:10px !important}  .breadcrumbs-container li {display:inline-flex !important} .sidebar-button {display:none !important} .article-actions-container {max-height:none !important} .article-actions-container .container {margin-left:0 !important} .main-wrapper {display:block !important} .main-content {padding-top:1.5em !important} .main-page-content h1 a[href^='#']:hover:after, .main-page-content h2 a[href^='#']:hover:after, .main-page-content h3 a[href^='#']:hover:after, .main-page-content h4 a[href^='#']:hover:after, .main-page-content h5 a[href^='#']:hover:after, .main-page-content h6 a[href^='#']:hover:after {content:none !important} .main-page-content h1 a:focus, .main-page-content h1 a:hover, .main-page-content h2 a:focus, .main-page-content h2 a:hover, .main-page-content h3 a:focus, .main-page-content h3 a:hover, .main-page-content h4 a:focus, .main-page-content h4 a:hover, .main-page-content h5 a:focus, .main-page-content h5 a:hover, .main-page-content h6 a:focus, .main-page-content h6 a:hover {text-decoration: none} html {scroll-padding-top:24px !important; scroll-behavior: auto !important} .table-container {width:100% !important; margin: 0 0 !important} .main-page-content figure iframe {width: auto !important}
